@@ -1,0 +1,64 @@
+.quran-audio-player {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.quran-audio-player--empty {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  gap: var(--space-2);
+}
+
+.quran-audio-player__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-primary-ink);
+  cursor: pointer;
+}
+
+.quran-audio-player__toggle:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.quran-audio-player__label {
+  flex: 1;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quran-audio-player__autoplay {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 36px;
+  flex-shrink: 0;
+}
+
+.quran-audio-player__autoplay--active {
+  color: var(--color-primary);
+  border-color: rgba(184, 230, 138, 0.4);
+  background: rgba(184, 230, 138, 0.1);
+}

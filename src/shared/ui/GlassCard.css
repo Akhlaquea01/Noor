@@ -1,0 +1,55 @@
+.glass-card {
+  background: var(--glass-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  transition: border-color var(--duration-med) var(--ease-out), background var(--duration-med) var(--ease-out);
+}
+
+.glass-card--hero {
+  background: var(--panel-gradient);
+  border-color: transparent;
+}
+
+.glass-card--accent {
+  background: var(--accent-panel-bg);
+  color: var(--accent-panel-text);
+  border-color: transparent;
+}
+
+.glass-card--glow-teal {
+  border-color: rgba(184, 230, 138, 0.4);
+}
+
+.glass-card--glow-gold {
+  border-color: rgba(217, 189, 114, 0.4);
+}
+
+.glass-card--interactive {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+@media (hover: hover) {
+  .glass-card--interactive:hover {
+    border-color: rgba(184, 230, 138, 0.4);
+    background: rgba(184, 230, 138, 0.05);
+  }
+
+  .glass-card--interactive.glass-card--hero:hover,
+  .glass-card--interactive.glass-card--accent:hover {
+    background: var(--panel-gradient);
+    filter: brightness(1.06);
+  }
+}
+
+.glass-card--interactive:active {
+  transform: scale(0.99);
+}
+
+.glass-card--interactive:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}

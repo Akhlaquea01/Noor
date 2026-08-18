@@ -1,0 +1,72 @@
+.quran-list-page {
+  padding: var(--space-5);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.quran-list-page h1 {
+  margin: 0 0 var(--space-4);
+}
+
+.quran-list-page__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.quran-list-page__skeletons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.quran-list-page__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+}
+
+.quran-list-page__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--glass-surface-strong);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.quran-list-page__names {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.quran-list-page__names strong {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.quran-list-page__continue-icon {
+  color: var(--grad-teal-light);
+}
+
+.quran-list-page__meta {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.quran-list-page__arabic-name {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}

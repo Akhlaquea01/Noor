@@ -1,0 +1,57 @@
+@import './shared/ui/tokens.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background: var(--color-bg-gradient);
+  background-attachment: fixed;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.01em;
+}
+
+[lang='ar'],
+.arabic-text {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  line-height: 2;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}

@@ -1,0 +1,118 @@
+/*
+  Design tokens for Noor: a calm, editorial dark-first interface — deep
+  teal ground, sage-green primary accent, soft gold for secondary emphasis,
+  subtle 1px borders rather than heavy glass blur. Matches the reference
+  prototype the user supplied (noor-peach.vercel.app) rather than the
+  earlier glassmorphism direction. All feature UI should be built from
+  these tokens, not one-off colors.
+*/
+:root {
+  --color-gold: #d9bd72;
+  --color-gold-soft: #e8d19c;
+  --color-primary: #b8e68a;
+  --color-primary-ink: #0c2015;
+
+  /* Kept for backward compatibility with existing component CSS written
+     against the earlier teal/emerald palette — repointed to the new sage
+     green + deep teal panel tones so every consumer updates automatically
+     without a per-file rewrite. --grad-teal-light is the "bright accent /
+     active state" role (was teal, now sage green); --grad-emerald* are the
+     dark panel-gradient tones. */
+  --grad-teal-light: var(--color-primary);
+  --grad-teal: #123a35;
+  --grad-emerald: #183f36;
+  --grad-emerald-deep: #0e2a27;
+
+  /* Dark is the flagship look (matches the reference); light is a
+     structurally-consistent complement for users who prefer it. */
+  --color-bg: #071d1b;
+  --color-bg-gradient: radial-gradient(circle at 77% 0%, #15443b 0, transparent 31rem), #071d1b;
+  --color-text: #edf5ef;
+  --color-text-muted: #8ca6a0;
+  --color-soft: #c8d8cd;
+
+  /* Card surfaces: mostly transparent + a 1px border, not blur. A small
+     set of "hero" panels use --panel-gradient for emphasis instead. */
+  --glass-surface: transparent;
+  --glass-surface-strong: #102b28;
+  --glass-border: rgba(190, 227, 197, 0.13);
+  --glass-blur: 0px;
+  --panel-gradient: linear-gradient(125deg, #183f36, #0e2a27);
+  --accent-panel-bg: #e4e9df;
+  --accent-panel-text: #17352e;
+  --accent-panel-muted: #648077;
+
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.28);
+  --shadow-lift: 0 14px 40px rgba(0, 0, 0, 0.38);
+  --glow-gold: 0 0 0 rgba(0, 0, 0, 0);
+  --glow-teal: 0 0 0 rgba(0, 0, 0, 0);
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* Radius scale */
+  --radius-sm: 0.6rem;
+  --radius-md: 0.85rem;
+  --radius-lg: 1.15rem;
+  --radius-xl: 1.6rem;
+  --radius-full: 999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 160ms;
+  --duration-med: 320ms;
+  --duration-slow: 560ms;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-arabic: 'Amiri', 'Traditional Arabic', serif;
+
+  --font-scale: 1;
+  font: calc(16px * var(--font-scale)) / 1.5 var(--font-sans);
+  color-scheme: dark;
+}
+
+.high-contrast {
+  --color-text-muted: var(--color-text);
+  --glass-border: currentcolor;
+}
+
+.force-reduced-motion,
+.force-reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --color-bg: #f6f4ee;
+  --color-bg-gradient: radial-gradient(circle at 77% 0%, #eef3e6 0, transparent 31rem), #f6f4ee;
+  --color-text: #16241f;
+  --color-text-muted: #62716a;
+  --color-soft: #3a473f;
+  --color-primary-ink: #ffffff;
+
+  --glass-surface: transparent;
+  --glass-surface-strong: #ffffff;
+  --glass-border: rgba(22, 36, 31, 0.12);
+  --panel-gradient: linear-gradient(125deg, #2c5c4f, #17352e);
+  --accent-panel-bg: #1c3a32;
+  --accent-panel-text: #eef5ee;
+  --accent-panel-muted: #a9c2b6;
+
+  --grad-teal-light: #4f8a3f;
+  --grad-teal: #d7e6cf;
+  --grad-emerald: #2c5c4f;
+  --grad-emerald-deep: #17352e;
+
+  --shadow-soft: 0 8px 24px rgba(22, 36, 31, 0.08);
+  --shadow-lift: 0 14px 32px rgba(22, 36, 31, 0.12);
+}

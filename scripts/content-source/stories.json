@@ -1,0 +1,48 @@
+{
+  "categories": [
+    { "id": "prophet-life", "label": "Life of the Prophet ﷺ" },
+    { "id": "companions", "label": "The Companions" }
+  ],
+  "stories": [
+    {
+      "id": "story-first-revelation",
+      "categoryId": "prophet-life",
+      "title": "The First Revelation",
+      "summary": "How the Qur'an began, in the cave of Hira.",
+      "body": "Before he became a prophet, Muhammad ﷺ would often retreat to the cave of Hira, in the mountains near Makkah, to reflect in solitude. It was there, at the age of forty, that the angel Jibril (Gabriel) came to him with the first words of revelation: the opening verses of Surah Al-Alaq, commanding him to \"Read, in the name of your Lord who created.\" Shaken by the experience, he returned home to his wife Khadijah, who comforted him and became the first person to believe in his message. Over the following twenty-three years, the rest of the Qur'an would be revealed to him in stages, guiding the early Muslim community through years of hardship and, eventually, to a place of security in Madinah.",
+      "reference": "Traditionally dated to 610 CE; recorded in the earliest biographies of the Prophet ﷺ (seerah) and the hadith collections."
+    },
+    {
+      "id": "story-year-of-sorrow",
+      "categoryId": "prophet-life",
+      "title": "The Year of Sorrow",
+      "summary": "A season of loss that tested the young Muslim community.",
+      "body": "In the tenth year of his prophethood, Muhammad ﷺ lost two of the people who had protected and supported him most. His wife Khadijah, his first supporter and closest companion for twenty-five years, passed away, followed soon after by his uncle Abu Talib, who — though he never accepted Islam himself — had shielded his nephew from the worst of the Makkan tribes' hostility. With Abu Talib's protection gone, persecution of the Muslims intensified. This period, remembered as the \"Year of Sorrow,\" was followed shortly after by the Night Journey (Isra and Mi'raj) and, within a few years, by the migration to Madinah that would transform the young community's fortunes.",
+      "reference": "Traditionally dated to around 619–620 CE, in the standard chronology of the seerah."
+    },
+    {
+      "id": "story-hijrah",
+      "categoryId": "prophet-life",
+      "title": "The Migration to Madinah",
+      "summary": "The journey that gave the Islamic calendar its starting point.",
+      "body": "Facing growing danger in Makkah, Muhammad ﷺ and his close companion Abu Bakr set out for Madinah, whose people had invited the Muslims to settle among them. To evade pursuers, the two first hid in the cave of Thawr, south of Makkah, before making the journey north. Their arrival in Madinah in 622 CE marked a turning point: the Muslim community now had a home where it could organize and grow, rather than facing constant persecution. This migration, the Hijrah, was later chosen by the companions as the starting point of the Islamic calendar — not the Prophet's birth or the first revelation, but the moment the community found the security to build a life of open faith.",
+      "reference": "622 CE; the starting point of the Hijri calendar, adopted during the caliphate of Umar ibn al-Khattab."
+    },
+    {
+      "id": "story-hudaybiyyah",
+      "categoryId": "prophet-life",
+      "title": "The Treaty of Hudaybiyyah",
+      "summary": "A peace agreement that looked like a setback and became a turning point.",
+      "body": "In the sixth year after the Hijrah, Muhammad ﷺ set out with his companions to perform pilgrimage in Makkah, only to be stopped short of the city by the Quraysh. Rather than fight, he agreed to a truce at a place called Hudaybiyyah — one whose terms, at first glance, seemed to favor the Quraysh. Many of his companions were troubled by the concessions. Yet the treaty brought ten years of peace between the two sides, during which travel and communication opened up and the message of Islam spread further than years of conflict had allowed. Within two years, the Quraysh themselves broke the treaty, and Makkah was peacefully brought under Muslim control soon after — a outcome the Qur'an itself described as a clear victory.",
+      "reference": "6 AH (roughly 628 CE); described in Surah Al-Fath (48), traditionally understood as revealed in connection with this treaty."
+    },
+    {
+      "id": "story-bilal",
+      "categoryId": "companions",
+      "title": "Bilal ibn Rabah",
+      "summary": "From enslaved outcast to the first voice of the adhan.",
+      "body": "Bilal ibn Rabah was an Abyssinian man enslaved in Makkah when he accepted Islam in its earliest years. His enslaver, Umayyah ibn Khalaf, tortured him in the desert heat for refusing to renounce his faith, but Bilal is remembered for repeating only one word through his suffering: \"Ahad\" — One, in reference to the oneness of God. He was eventually freed after Abu Bakr purchased his liberty. Bilal went on to become one of the closest companions of the Prophet ﷺ and, because of his powerful voice, was chosen as the first person to call the adhan, the call to prayer — a role that placed a man once treated as the lowest in Makkan society at the very center of the young Muslim community's daily life.",
+      "reference": "Recorded across the earliest seerah and hadith literature; his endurance under persecution is among the most frequently cited episodes of the early Makkan period."
+    }
+  ]
+}

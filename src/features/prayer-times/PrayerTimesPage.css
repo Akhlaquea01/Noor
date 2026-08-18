@@ -1,0 +1,86 @@
+.prayer-times-page {
+  padding: var(--space-5);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.prayer-times-page h1 {
+  margin: 0 0 var(--space-2);
+}
+
+.prayer-times-page__location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-4);
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+}
+
+.prayer-times-page__status {
+  color: var(--color-text-muted);
+}
+
+.prayer-times-page__error {
+  text-align: center;
+}
+
+.prayer-times-page__error a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  color: var(--grad-teal-light);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.prayer-times-page__next {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.prayer-times-page__next-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.prayer-times-page__next-time {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  text-shadow: var(--glow-gold);
+  font-variant-numeric: tabular-nums;
+  margin: var(--space-1) 0;
+}
+
+.prayer-times-page__next-countdown {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.prayer-times-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.prayer-times-page__row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-4);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.prayer-times-page__row--active {
+  color: var(--grad-teal-light);
+  box-shadow: var(--shadow-soft), var(--glow-teal);
+}

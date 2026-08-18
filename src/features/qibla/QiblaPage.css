@@ -1,0 +1,75 @@
+.qibla-page {
+  padding: var(--space-5);
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.qibla-page h1 {
+  margin: 0 0 var(--space-4);
+}
+
+.qibla-page__status {
+  color: var(--color-text-muted);
+}
+
+.qibla-page__error {
+  color: var(--color-text-muted);
+}
+
+.qibla-page__compass {
+  display: flex;
+  justify-content: center;
+  margin: var(--space-4) 0;
+}
+
+.qibla-page__dial {
+  width: 260px;
+  height: 260px;
+}
+
+.qibla-page__ring {
+  fill: var(--glass-surface);
+  stroke: var(--glass-border);
+  stroke-width: 1;
+}
+
+.qibla-page__cardinal {
+  fill: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+.qibla-page__needle {
+  fill: var(--color-gold);
+  filter: drop-shadow(0 0 6px rgba(212, 175, 106, 0.5));
+}
+
+.qibla-page__needle-icon {
+  color: var(--grad-emerald);
+}
+
+.qibla-page__bearing {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  margin: 0 0 var(--space-3);
+}
+
+.qibla-page__enable {
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-full);
+  border: none;
+  background: linear-gradient(90deg, var(--grad-teal), var(--grad-teal-light));
+  color: #fff;
+  font-weight: 700;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.qibla-page__note {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+}

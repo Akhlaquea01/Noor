@@ -1,0 +1,49 @@
+.step-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.step-card__order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--glass-surface-strong);
+  color: var(--color-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.step-card__header h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.step-card__description {
+  margin: 0 0 var(--space-3);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.step-card__arabic {
+  font-size: 1.3rem;
+  text-align: right;
+  margin: 0 0 var(--space-2);
+}
+
+.step-card__transliteration {
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-2);
+  font-size: 0.88rem;
+}
+
+.step-card__translation {
+  margin: 0 0 var(--space-3);
+  font-size: 0.92rem;
+}

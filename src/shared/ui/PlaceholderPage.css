@@ -1,0 +1,29 @@
+.placeholder-page {
+  padding: var(--space-6) var(--space-4);
+  max-width: 480px;
+  margin: var(--space-7) auto;
+}
+
+.placeholder-page__card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.placeholder-page__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--color-gold);
+}
+
+.placeholder-page__card h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.placeholder-page__card p {
+  margin: 0;
+  color: var(--color-text-muted);
+}

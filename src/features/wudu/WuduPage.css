@@ -1,0 +1,22 @@
+.wudu-page {
+  padding: var(--space-5);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.wudu-page h1 {
+  margin: 0 0 var(--space-2);
+}
+
+.wudu-page__note {
+  margin: 0 0 var(--space-4);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.wudu-page__steps,
+.wudu-page__skeletons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}

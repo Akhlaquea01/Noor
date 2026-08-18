@@ -1,0 +1,145 @@
+{
+  "wudu": [
+    {
+      "id": "niyyah",
+      "title": "Intention (Niyyah)",
+      "description": "Form the intention in your heart to perform wudu for the sake of Allah, purifying yourself before worship. The intention is not spoken aloud."
+    },
+    {
+      "id": "bismillah",
+      "title": "Say Bismillah",
+      "description": "Begin by saying \"In the name of Allah,\" as taught in the Sunnah before starting wudu.",
+      "arabicSource": { "type": "quran", "surah": 1, "ayah": 1 }
+    },
+    {
+      "id": "wash-hands",
+      "title": "Wash the Hands",
+      "description": "Wash both hands up to the wrists three times, making sure water reaches between the fingers."
+    },
+    {
+      "id": "rinse-mouth",
+      "title": "Rinse the Mouth",
+      "description": "Take water into the mouth and rinse it thoroughly, three times."
+    },
+    {
+      "id": "rinse-nose",
+      "title": "Rinse the Nose",
+      "description": "Sniff water gently into the nostrils and then blow it out, three times."
+    },
+    {
+      "id": "wash-face",
+      "title": "Wash the Face",
+      "description": "Wash the whole face three times, from the hairline to the chin and from ear to ear."
+    },
+    {
+      "id": "wash-right-arm",
+      "title": "Wash the Right Arm",
+      "description": "Wash the right arm from the fingertips to (and including) the elbow, three times."
+    },
+    {
+      "id": "wash-left-arm",
+      "title": "Wash the Left Arm",
+      "description": "Wash the left arm from the fingertips to (and including) the elbow, three times."
+    },
+    {
+      "id": "wipe-head",
+      "title": "Wipe the Head",
+      "description": "With wet hands, wipe over the head once, moving from the front to the back and then back to the front."
+    },
+    {
+      "id": "wipe-ears",
+      "title": "Wipe the Ears",
+      "description": "Wipe the inside of the ears with the index fingers and the outside with the thumbs, once."
+    },
+    {
+      "id": "wash-right-foot",
+      "title": "Wash the Right Foot",
+      "description": "Wash the right foot up to (and including) the ankle, three times, including between the toes."
+    },
+    {
+      "id": "wash-left-foot",
+      "title": "Wash the Left Foot",
+      "description": "Wash the left foot up to (and including) the ankle, three times, including between the toes."
+    },
+    {
+      "id": "after-wudu",
+      "title": "Recite After Wudu",
+      "description": "After completing wudu, it is Sunnah to bear witness to the oneness of Allah and ask to be among those who purify themselves.",
+      "arabicSource": { "type": "azkar", "category": "الذكر بعد الفراغ من الوضوء", "indexes": [0, 1] }
+    }
+  ],
+  "salahVariants": [
+    {
+      "id": "essentials",
+      "label": "Salah Essentials",
+      "description": "The core sequence of a single unit (rakah) of prayer, from the opening takbir through the final tashahhud.",
+      "steps": [
+        {
+          "id": "salah-niyyah",
+          "title": "Intention (Niyyah)",
+          "description": "Face the Qibla and form the intention in your heart for the specific prayer you are about to perform."
+        },
+        {
+          "id": "takbiratul-ihram",
+          "title": "Opening Takbir (Takbiratul Ihram)",
+          "description": "Raise your hands and say the opening takbir, which begins the prayer.",
+          "arabicSource": { "type": "literal", "arabic": "اللَّهُ أَكْبَرُ", "transliteration": "Allahu Akbar", "translation": "Allah is the Greatest" }
+        },
+        {
+          "id": "istiftah",
+          "title": "Opening Supplication (Istiftah)",
+          "description": "Standing (Qiyam), recite the opening supplication silently before beginning recitation.",
+          "arabicSource": { "type": "azkar", "category": "دعاء الاستفتاح", "indexes": [1] }
+        },
+        {
+          "id": "al-fatihah",
+          "title": "Recite Al-Fatihah",
+          "description": "Recite Surah Al-Fatihah, which is required in every unit of prayer, followed (in most units) by another passage from the Qur'an.",
+          "arabicSource": { "type": "quran", "surah": 1, "ayah": 1, "ayahEnd": 7 }
+        },
+        {
+          "id": "ruku",
+          "title": "Bowing (Ruku)",
+          "description": "Bow with your back straight and hands resting on your knees, saying the glorification of your Lord three times.",
+          "arabicSource": { "type": "azkar", "category": "دعاء الركوع", "indexes": [0] }
+        },
+        {
+          "id": "rising-from-ruku",
+          "title": "Rising from Ruku",
+          "description": "Stand up straight from the bow, saying the praise of Allah.",
+          "arabicSource": { "type": "azkar", "category": "دعاء الرفع من الركوع", "indexes": [0, 1] }
+        },
+        {
+          "id": "sujood",
+          "title": "Prostration (Sujood)",
+          "description": "Prostrate with your forehead, nose, palms, knees, and toes touching the ground, saying the glorification of your Lord, the Most High, three times.",
+          "arabicSource": { "type": "azkar", "category": "دعاء السجود", "indexes": [0] }
+        },
+        {
+          "id": "jalsa",
+          "title": "Sitting Between the Two Prostrations",
+          "description": "Sit up briefly between the two prostrations, asking for forgiveness, before prostrating a second time.",
+          "arabicSource": { "type": "azkar", "category": "دعاء الجلسة بين السجدتين", "indexes": [0] }
+        },
+        {
+          "id": "tashahhud",
+          "title": "Tashahhud",
+          "description": "Sitting after two units (and again at the end of the prayer), recite the tashahhud, testifying to the oneness of Allah and the Prophethood of Muhammad ﷺ.",
+          "arabicSource": { "type": "azkar", "category": "التشهد", "indexes": [0] }
+        },
+        {
+          "id": "durood",
+          "title": "Salawat Upon the Prophet",
+          "description": "In the final tashahhud, send blessings upon the Prophet Muhammad ﷺ, as taught in the Sunnah.",
+          "arabicSource": { "type": "azkar", "category": "الصلاة على النبي بعد التشهد", "indexes": [0] }
+        },
+        {
+          "id": "taslim",
+          "title": "Ending the Prayer (Taslim)",
+          "description": "Turn your head to the right, then to the left, saying the closing greeting to end the prayer.",
+          "arabicSource": { "type": "literal", "arabic": "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ", "transliteration": "As-salamu 'alaykum wa rahmatullah", "translation": "Peace and the mercy of Allah be upon you" }
+        }
+      ]
+    }
+  ]
+}

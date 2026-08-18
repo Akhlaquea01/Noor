@@ -1,0 +1,88 @@
+.hijri-calendar-page {
+  padding: var(--space-5);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.hijri-calendar-page h1 {
+  margin: 0 0 var(--space-4);
+}
+
+.hijri-calendar-page__today {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.hijri-calendar-page__today-hijri {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.hijri-calendar-page__today-gregorian {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.hijri-calendar-page__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+  font-weight: 700;
+}
+
+.hijri-calendar-page__nav button {
+  background: var(--glass-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit;
+}
+
+.hijri-calendar-page__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-1);
+  text-align: center;
+}
+
+.hijri-calendar-page__day-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  padding: var(--space-2) 0;
+}
+
+.hijri-calendar-page__cell {
+  padding: var(--space-3) 0;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.hijri-calendar-page__cell--empty {
+  visibility: hidden;
+}
+
+.hijri-calendar-page__cell--today {
+  background: linear-gradient(90deg, var(--grad-teal), var(--grad-teal-light));
+  color: #fff;
+  font-weight: 700;
+}
+
+.hijri-calendar-page__disclaimer {
+  margin-top: var(--space-5);
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}

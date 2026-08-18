@@ -1,0 +1,32 @@
+.update-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: linear-gradient(90deg, var(--grad-emerald), var(--grad-teal));
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.update-banner__icon {
+  color: var(--color-gold-soft);
+  flex-shrink: 0;
+}
+
+.update-banner button {
+  background: #fff;
+  color: var(--grad-emerald);
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+  min-height: 36px;
+  cursor: pointer;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.update-banner button:hover {
+  transform: translateY(-1px);
+}

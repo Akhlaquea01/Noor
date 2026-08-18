@@ -1,0 +1,85 @@
+.tasbih-page {
+  padding: var(--space-5);
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.tasbih-page h1 {
+  margin: 0;
+  align-self: flex-start;
+}
+
+.tasbih-page__dhikr-select {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.tasbih-page__dhikr-option {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-surface);
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 40px;
+}
+
+.tasbih-page__dhikr-option--active {
+  color: #fff;
+  background: linear-gradient(90deg, var(--grad-teal), var(--grad-teal-light));
+  border-color: transparent;
+}
+
+.tasbih-page__counter {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tasbih-page__counter:active {
+  transform: scale(0.97);
+}
+
+.tasbih-page__count {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  text-shadow: var(--glow-gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.tasbih-page__target {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.tasbih-page__reset {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-surface);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  min-height: 44px;
+  cursor: pointer;
+}

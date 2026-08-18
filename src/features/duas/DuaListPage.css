@@ -1,0 +1,70 @@
+.dua-list-page {
+  padding: var(--space-5);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.dua-list-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.dua-list-page h1 {
+  margin: 0 0 var(--space-4);
+}
+
+.dua-list-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.dua-list-page__skeletons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.dua-list-page__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-1);
+}
+
+.dua-list-page__card-header h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.dua-list-page__reference {
+  margin: 0 0 var(--space-3);
+  font-size: 0.75rem;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.dua-list-page__arabic {
+  font-size: 1.4rem;
+  text-align: right;
+  margin: 0 0 var(--space-3);
+}
+
+.dua-list-page__transliteration {
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-2);
+  font-size: 0.9rem;
+}
+
+.dua-list-page__translation {
+  margin: 0 0 var(--space-4);
+  font-size: 0.95rem;
+}
