@@ -22,6 +22,11 @@
 .step-card__header h2 {
   margin: 0;
   font-size: 1.05rem;
+  flex: 1;
+}
+
+.step-card__listen {
+  flex-shrink: 0;
 }
 
 .step-card__description {

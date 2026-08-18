@@ -44,6 +44,12 @@
   font-size: 1.05rem;
 }
 
+.dua-list-page__card-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
 .dua-list-page__reference {
   margin: 0 0 var(--space-3);
   font-size: 0.75rem;

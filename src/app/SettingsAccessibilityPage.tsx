@@ -1,5 +1,6 @@
 import { usePreferencesStore } from '../shared/state/preferencesStore'
 import { GlassCard } from '../shared/ui/GlassCard'
+import { VoiceLanguageCard } from '../shared/ui/VoiceLanguageCard'
 import './SettingsAccessibilityPage.css'
 
 const FONT_SCALES = [
@@ -64,6 +65,8 @@ export function SettingsAccessibilityPage() {
           />
         </label>
       </GlassCard>
+
+      <VoiceLanguageCard />
     </section>
   )
 }

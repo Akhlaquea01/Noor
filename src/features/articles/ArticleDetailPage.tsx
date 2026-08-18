@@ -4,6 +4,7 @@ import { ChevronLeft } from 'lucide-react'
 import { GlassCard } from '../../shared/ui/GlassCard'
 import { Skeleton } from '../../shared/ui/Skeleton'
 import { BookmarkButton } from '../bookmarks-favorites/BookmarkButton'
+import { ListenButton } from '../../shared/ui/ListenButton'
 import { getArticleById } from './api/articleContent'
 import { articleProgressRepo } from '../../shared/db/repositories'
 import type { ArticleKind, Article } from './types'
@@ -46,7 +47,10 @@ export function ArticleDetailPage({ kind, basePath, backLabel }: ArticleDetailPa
         <GlassCard className="article-detail-page__card">
           <div className="article-detail-page__header">
             <h1>{article.title}</h1>
-            <BookmarkButton contentType={kind === 'blog' ? 'article' : 'story'} refId={article.id} extra={{ articleId: article.id, note: article.title }} />
+            <div className="article-detail-page__actions">
+              <ListenButton text={article.body} lang="en-US" />
+              <BookmarkButton contentType={kind === 'blog' ? 'article' : 'story'} refId={article.id} extra={{ articleId: article.id, note: article.title }} />
+            </div>
           </div>
           <p className="article-detail-page__body">{article.body}</p>
           {article.reference && <p className="article-detail-page__reference">{article.reference}</p>}

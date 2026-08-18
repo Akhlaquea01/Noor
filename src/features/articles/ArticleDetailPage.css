@@ -34,6 +34,12 @@
   font-size: 1.3rem;
 }
 
+.article-detail-page__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
 .article-detail-page__body {
   white-space: pre-line;
   line-height: 1.7;

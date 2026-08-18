@@ -6,6 +6,7 @@ import { Skeleton } from '../../shared/ui/Skeleton'
 import { StageSelector } from '../learning-progress/StageSelector'
 import { useLearningStage } from '../learning-progress/hooks/useLearningStage'
 import { BookmarkButton } from '../bookmarks-favorites/BookmarkButton'
+import { ListenButton } from '../../shared/ui/ListenButton'
 import { getDuasByCategory, getDuaCategories } from './api/duaContent'
 import type { Dua, DuaCategory } from './types'
 import './DuaListPage.css'
@@ -17,7 +18,10 @@ function DuaCard({ dua }: { dua: Dua }) {
     <GlassCard className="dua-list-page__card">
       <div className="dua-list-page__card-header">
         <h2>{dua.title}</h2>
-        <BookmarkButton contentType="dua" refId={dua.id} extra={{ duaId: dua.id, note: dua.title }} />
+        <div className="dua-list-page__card-actions">
+          <ListenButton text={dua.arabic} lang="ar-SA" />
+          <BookmarkButton contentType="dua" refId={dua.id} extra={{ duaId: dua.id, note: dua.title }} />
+        </div>
       </div>
       <p className="dua-list-page__reference">{dua.reference}</p>
       <p className="dua-list-page__arabic arabic-text" lang="ar">

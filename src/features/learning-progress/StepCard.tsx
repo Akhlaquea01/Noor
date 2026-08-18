@@ -1,4 +1,5 @@
 import { GlassCard } from '../../shared/ui/GlassCard'
+import { ListenButton } from '../../shared/ui/ListenButton'
 import { StageSelector } from './StageSelector'
 import { useLearningStage } from './hooks/useLearningStage'
 import type { LearningCategory } from '../../shared/db/types'
@@ -36,6 +37,11 @@ export function StepCard({
       <div className="step-card__header">
         <span className="step-card__order">{order}</span>
         <h2>{title}</h2>
+        {arabic && (
+          <div className="step-card__listen">
+            <ListenButton text={arabic} lang="ar-SA" />
+          </div>
+        )}
       </div>
       <p className="step-card__description">{description}</p>
       {arabic && (
