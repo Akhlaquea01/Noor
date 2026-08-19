@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Download, Trash2, Play, Loader2 } from 'lucide-react'
 import { GlassCard } from '../../shared/ui/GlassCard'
 import { Skeleton } from '../../shared/ui/Skeleton'
@@ -17,6 +17,7 @@ function formatBytes(bytes: number): string {
 export function DownloadsPage() {
   const [meta, setMeta] = useState<QuranMeta | null>(null)
   const [playingUrl, setPlayingUrl] = useState<string | null>(null)
+  const playingUrlRef = useRef<string | null>(null)
   const downloads = useDownloadsStore((s) => s.downloads)
   const hydrate = useDownloadsStore((s) => s.hydrate)
   const startDownload = useDownloadsStore((s) => s.startDownload)
@@ -27,11 +28,30 @@ export function DownloadsPage() {
     void hydrate()
   }, [hydrate])
 
+  // Object URLs created by getCachedAudioUrl() must be revoked or they leak
+  // for the rest of the page's lifetime — every play() call here used to
+  // create a new one without ever releasing the previous surah's.
+  useEffect(() => {
+    return () => {
+      if (playingUrlRef.current) URL.revokeObjectURL(playingUrlRef.current)
+    }
+  }, [])
+
   const play = async (surah: number) => {
     const record = downloads.get(`quran-audio:${surah}`)
     if (!record?.cacheStorageKey) return
+    if (playingUrlRef.current) URL.revokeObjectURL(playingUrlRef.current)
     const url = await getCachedAudioUrl(record.cacheStorageKey)
+    playingUrlRef.current = url
     setPlayingUrl(url)
+  }
+
+  const stopPlaying = () => {
+    if (playingUrlRef.current) {
+      URL.revokeObjectURL(playingUrlRef.current)
+      playingUrlRef.current = null
+    }
+    setPlayingUrl(null)
   }
 
   return (
@@ -40,7 +60,7 @@ export function DownloadsPage() {
       <p className="downloads-page__note">Quran recitation by {RECITER_LABEL}, downloaded per surah for offline listening.</p>
 
       {playingUrl && (
-        <audio className="downloads-page__player" src={playingUrl} controls autoPlay onEnded={() => setPlayingUrl(null)} />
+        <audio className="downloads-page__player" src={playingUrl} controls autoPlay onEnded={stopPlaying} />
       )}
 
       {!meta && (

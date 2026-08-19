@@ -1,30 +1,19 @@
-import { useEffect, useState } from 'react'
-import { detectCapabilities } from '../lib/capabilities'
-import type { NotificationCapabilities } from '../lib/capabilities'
-import { notificationSettingsRepo } from '../../../shared/db/repositories'
+import { useEffect } from 'react'
+import { useNotificationCapabilitiesStore } from '../state/notificationCapabilitiesStore'
 
-// Re-evaluated on mount and on visibilitychange (catches "user just
-// installed the PWA and returned") rather than trusting a cached snapshot —
-// capability state can change independently of anything this app does.
+// Thin wrapper kept for the existing call sites — the actual state now
+// lives in a shared Zustand store (see notificationCapabilitiesStore.ts)
+// so every consumer sees the same live capabilities/permission value
+// instead of each hook call holding its own disconnected copy.
 export function useNotificationCapabilities() {
-  const [capabilities, setCapabilities] = useState<NotificationCapabilities>(detectCapabilities)
+  const capabilities = useNotificationCapabilitiesStore((s) => s.capabilities)
+  const refresh = useNotificationCapabilitiesStore((s) => s.refresh)
+  const requestPermission = useNotificationCapabilitiesStore((s) => s.requestPermission)
 
   useEffect(() => {
-    const refresh = () => {
-      const next = detectCapabilities()
-      setCapabilities(next)
-      void notificationSettingsRepo.update({ permissionStatusCache: next.permission, capabilitySnapshot: next })
-    }
     refresh()
-    document.addEventListener('visibilitychange', refresh)
-    return () => document.removeEventListener('visibilitychange', refresh)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
-  const requestPermission = async () => {
-    if (typeof Notification === 'undefined') return
-    await Notification.requestPermission()
-    setCapabilities(detectCapabilities())
-  }
 
   return { capabilities, requestPermission }
 }

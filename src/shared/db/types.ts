@@ -129,7 +129,10 @@ export interface DownloadRecord extends SyncMeta {
 
 export type ReminderKind = 'prayer' | 'daily'
 export type PrayerName = 'fajr' | 'dhuhr' | 'asr' | 'maghrib' | 'isha'
-export type DailyReminderCategory = 'morning' | 'afternoon' | 'evening' | 'night'
+// 'afternoon' was dropped: it only ever meant "Salah & Dhikr reminder",
+// which duplicated the Asr toggle already in the Prayer Notifications
+// section — a distinct time-of-day daily reminder wasn't adding anything.
+export type DailyReminderCategory = 'morning' | 'evening' | 'night'
 
 export interface ReminderRecord extends SyncMeta {
   kind: ReminderKind

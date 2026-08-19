@@ -11,7 +11,6 @@ const PRAYERS = Object.keys(PRAYER_LABELS) as PrayerName[]
 
 const DAILY_CATEGORIES: { id: DailyReminderCategory; label: string; hint: string }[] = [
   { id: 'morning', label: 'Morning', hint: 'Morning Adhkar & Quran' },
-  { id: 'afternoon', label: 'Afternoon', hint: 'Salah & Dhikr reminder' },
   { id: 'evening', label: 'Evening', hint: 'Evening Adhkar & Quran' },
   { id: 'night', label: 'Night', hint: 'Isha & Sleep Dua' },
 ]

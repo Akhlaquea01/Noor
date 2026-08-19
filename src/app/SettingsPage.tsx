@@ -29,6 +29,23 @@ export function SettingsPage() {
   const preferences = usePreferencesStore((s) => s.preferences)
   const update = usePreferencesStore((s) => s.update)
 
+  // Merges against the store's live state (via getState(), not the
+  // `preferences` closed over at render time) so rapid successive edits —
+  // e.g. typing latitude, then tabbing to longitude, then the UTC offset —
+  // can't clobber each other. Each of those fields previously rebuilt the
+  // whole manualLocation object from render-time `preferences`, which could
+  // still be missing the field just set by the previous keystroke if this
+  // component hadn't re-rendered yet.
+  const updateManualLocation = (patch: Partial<NonNullable<typeof preferences.manualLocation>>) => {
+    const current = usePreferencesStore.getState().preferences.manualLocation
+    void update({ manualLocation: { lat: current?.lat ?? 0, lng: current?.lng ?? 0, ...current, ...patch } })
+  }
+
+  const updateDailyGoal = (patch: Partial<typeof preferences.dailyGoal>) => {
+    const current = usePreferencesStore.getState().preferences.dailyGoal
+    void update({ dailyGoal: { ...current, ...patch } })
+  }
+
   return (
     <section className="settings-page">
       <h1>Settings</h1>
@@ -91,11 +108,7 @@ export function SettingsPage() {
                 type="text"
                 placeholder="e.g. Cairo"
                 value={preferences.manualLocation?.city ?? ''}
-                onChange={(e) =>
-                  void update({
-                    manualLocation: { ...preferences.manualLocation, lat: preferences.manualLocation?.lat ?? 0, lng: preferences.manualLocation?.lng ?? 0, city: e.target.value },
-                  })
-                }
+                onChange={(e) => updateManualLocation({ city: e.target.value })}
               />
             </label>
             <label className="settings-page__field">
@@ -106,22 +119,14 @@ export function SettingsPage() {
                   step="any"
                   placeholder="Latitude"
                   value={preferences.manualLocation?.lat ?? ''}
-                  onChange={(e) =>
-                    void update({
-                      manualLocation: { ...preferences.manualLocation, lat: Number(e.target.value) || 0, lng: preferences.manualLocation?.lng ?? 0 },
-                    })
-                  }
+                  onChange={(e) => updateManualLocation({ lat: Number(e.target.value) || 0 })}
                 />
                 <input
                   type="number"
                   step="any"
                   placeholder="Longitude"
                   value={preferences.manualLocation?.lng ?? ''}
-                  onChange={(e) =>
-                    void update({
-                      manualLocation: { ...preferences.manualLocation, lat: preferences.manualLocation?.lat ?? 0, lng: Number(e.target.value) || 0 },
-                    })
-                  }
+                  onChange={(e) => updateManualLocation({ lng: Number(e.target.value) || 0 })}
                 />
               </div>
             </label>
@@ -133,14 +138,7 @@ export function SettingsPage() {
                 placeholder="e.g. 1 for UK summer time"
                 value={preferences.manualLocation?.utcOffsetHours ?? ''}
                 onChange={(e) =>
-                  void update({
-                    manualLocation: {
-                      ...preferences.manualLocation,
-                      lat: preferences.manualLocation?.lat ?? 0,
-                      lng: preferences.manualLocation?.lng ?? 0,
-                      utcOffsetHours: e.target.value === '' ? undefined : Number(e.target.value),
-                    },
-                  })
+                  updateManualLocation({ utcOffsetHours: e.target.value === '' ? undefined : Number(e.target.value) })
                 }
               />
               <span className="settings-page__hint">
@@ -160,15 +158,11 @@ export function SettingsPage() {
               type="number"
               min={1}
               value={preferences.dailyGoal.amount}
-              onChange={(e) =>
-                void update({ dailyGoal: { ...preferences.dailyGoal, amount: Number(e.target.value) || 1 } })
-              }
+              onChange={(e) => updateDailyGoal({ amount: Number(e.target.value) || 1 })}
             />
             <select
               value={preferences.dailyGoal.type}
-              onChange={(e) =>
-                void update({ dailyGoal: { ...preferences.dailyGoal, type: e.target.value as 'pages' | 'juz' } })
-              }
+              onChange={(e) => updateDailyGoal({ type: e.target.value as 'pages' | 'juz' })}
             >
               <option value="pages">pages / day</option>
               <option value="juz">juz / day</option>
