@@ -11,7 +11,7 @@ import { getDuasByCategory, getDuaCategories } from './api/duaContent'
 import type { Dua, DuaCategory } from './types'
 import './DuaListPage.css'
 
-function DuaCard({ dua }: { dua: Dua }) {
+export function DuaCard({ dua }: { dua: Dua }) {
   const { stage, setStage } = useLearningStage('dua', dua.id)
 
   return (

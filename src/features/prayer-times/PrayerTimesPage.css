@@ -8,6 +8,13 @@
   margin: 0 0 var(--space-2);
 }
 
+.prayer-times-page__manual-note {
+  margin: -0.5rem 0 var(--space-4);
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
 .prayer-times-page__location {
   display: flex;
   align-items: center;

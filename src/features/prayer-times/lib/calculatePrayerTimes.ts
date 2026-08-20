@@ -1,4 +1,4 @@
-import { Coordinates, CalculationMethod, CalculationParameters, PrayerTimes, Madhab } from 'adhan'
+import { Coordinates, CalculationMethod, CalculationParameters, PrayerTimes, Madhab, HighLatitudeRule, PolarCircleResolution } from 'adhan'
 import type { GeoPoint } from '../../../shared/hooks/useLocation'
 
 export interface DailyPrayerTimes {
@@ -27,6 +27,15 @@ export function calculatePrayerTimes(
   const methodFn = (CalculationMethod as Record<string, () => CalculationParameters>)[calculationMethod]
   const params = (methodFn ?? CalculationMethod.MuslimWorldLeague)()
   params.madhab = madhab === 'hanafi' ? Madhab.Hanafi : Madhab.Shafi
+  // Unset, these default to a fixed rule regardless of latitude and to
+  // leaving polar-circle cases unresolved — at high latitudes (northern
+  // Europe/Canada, etc.) where true astronomical twilight may not occur for
+  // weeks at a time, that can silently produce an Invalid Date for Fajr or
+  // Isha with no fallback. `recommended()` picks the right rule for the
+  // given latitude, and AqrabYaum approximates from the nearest resolvable
+  // day inside the Arctic/Antarctic circle instead of returning nothing.
+  params.highLatitudeRule = HighLatitudeRule.recommended(coordinates)
+  params.polarCircleResolution = PolarCircleResolution.AqrabYaum
 
   const times = new PrayerTimes(coordinates, date, params)
   return {

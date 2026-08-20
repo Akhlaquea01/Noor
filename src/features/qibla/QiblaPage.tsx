@@ -7,7 +7,7 @@ import './QiblaPage.css'
 
 export function QiblaPage() {
   const { location, source, loading, error } = useLocation()
-  const { heading, needsPermissionRequest, requestPermission, permission } = useDeviceHeading()
+  const { heading, needsPermissionRequest, requestPermission, permission, timedOut } = useDeviceHeading()
 
   const bearing = location ? calculateQiblaBearing(location) : null
   const needleRotation = bearing !== null ? (heading !== null ? bearing - heading : bearing) : 0
@@ -44,7 +44,7 @@ export function QiblaPage() {
           )}
           {!needsPermissionRequest && heading === null && (
             <p className="qibla-page__note">
-              {permission === 'unsupported' || permission === 'denied'
+              {permission === 'unsupported' || permission === 'denied' || timedOut
                 ? 'Live compass is not available on this device — the bearing above is measured from true North.'
                 : 'Move your device to calibrate the compass.'}
             </p>

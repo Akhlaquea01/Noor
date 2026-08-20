@@ -30,9 +30,23 @@ export const useDownloadsStore = create<DownloadsState>((set, get) => ({
 
   async hydrate() {
     const list = await downloadsRepo.list()
-    const entries = list
-      .filter((d) => d.contentType === 'quran-audio')
-      .map((d) => [keyFor(Number(d.scopeId)), d] as const)
+    // A record still marked 'downloading' at hydrate time is always stale:
+    // downloads only run in-memory while this store is alive for the
+    // duration of a single page session, never resumed across a reload —
+    // so if the app closed, lost connectivity, or was killed mid-download,
+    // nothing is still writing to that record. Left as 'downloading', its
+    // row shows a spinner forever with no way to retry (see DownloadsPage,
+    // which only renders a retry button for 'error'/missing records).
+    const entries = await Promise.all(
+      list
+        .filter((d) => d.contentType === 'quran-audio')
+        .map(async (d) => {
+          if (d.status !== 'downloading') return [keyFor(Number(d.scopeId)), d] as const
+          const stale = touchSyncMeta({ ...d, status: 'error' as const })
+          await downloadsRepo.put(`${d.contentType}:${d.scopeId}`, stale)
+          return [keyFor(Number(d.scopeId)), stale] as const
+        })
+    )
     set({ downloads: new Map(entries), hydrated: true })
   },
 

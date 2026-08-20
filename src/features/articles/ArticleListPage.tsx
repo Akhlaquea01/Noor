@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ChevronRight } from 'lucide-react'
 import { GlassCard } from '../../shared/ui/GlassCard'
 import { Skeleton } from '../../shared/ui/Skeleton'
+import { FavoriteButton } from '../bookmarks-favorites/FavoriteButton'
 import { getAllArticles, getArticleCategories } from './api/articleContent'
 import { articleProgressRepo } from '../../shared/db/repositories'
 import type { ArticleKind, Article, ArticleCategory } from './types'
@@ -51,21 +52,18 @@ export function ArticleListPage({ kind, title, note, basePath }: ArticleListPage
                   .filter((a) => a.categoryId === cat.id)
                   .map((a) => (
                     <li key={a.id}>
-                      <GlassCard
-                        as={Link}
-                        to={`${basePath}/${a.id}`}
-                        viewTransition
-                        interactive
-                        className="article-list-page__row"
-                      >
-                        <div>
-                          <strong>{a.title}</strong>
-                          <p>{a.summary}</p>
-                        </div>
-                        <div className="article-list-page__row-end">
-                          {readIds.has(a.id) && <span className="article-list-page__read-badge">Read</span>}
-                          <ChevronRight size={16} aria-hidden="true" />
-                        </div>
+                      <GlassCard className="article-list-page__row">
+                        <Link to={`${basePath}/${a.id}`} viewTransition className="article-list-page__row-link">
+                          <div>
+                            <strong>{a.title}</strong>
+                            <p>{a.summary}</p>
+                          </div>
+                          <div className="article-list-page__row-end">
+                            {readIds.has(a.id) && <span className="article-list-page__read-badge">Read</span>}
+                            <ChevronRight size={16} aria-hidden="true" />
+                          </div>
+                        </Link>
+                        <FavoriteButton contentType={kind === 'blog' ? 'article' : 'story'} refId={a.id} />
                       </GlassCard>
                     </li>
                   ))}

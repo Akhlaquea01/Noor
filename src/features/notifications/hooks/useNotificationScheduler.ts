@@ -7,6 +7,7 @@ import { calculatePrayerTimes, PRAYER_LABELS } from '../../prayer-times/lib/calc
 import type { PrayerName } from '../../prayer-times/lib/calculatePrayerTimes'
 import { detectCapabilities } from '../lib/capabilities'
 import { playChime } from '../lib/chime'
+import { localDateKey } from '../../../shared/lib/dateKey'
 import type { DailyReminderCategory } from '../../../shared/db/types'
 
 // Each category fires only inside its own window, not "any time after the
@@ -26,14 +27,6 @@ const DAILY_MESSAGES: Record<DailyReminderCategory, string> = {
   morning: 'Time for Morning Adhkar and a moment with the Qur\'an.',
   evening: 'Time for Evening Adhkar and a moment with the Qur\'an.',
   night: 'Time for Isha and the Sleep Dua.',
-}
-
-// Local calendar day, not UTC — toISOString() would compare the wrong day
-// for anyone far from UTC (e.g. it rolls over at 5:30pm local time in
-// India, 2pm in New York), which could double-fire or skip a reminder near
-// that boundary. getHours() below is already local for the same reason.
-function todayKey(date: Date): string {
-  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
 }
 
 async function showReminder(title: string, body: string) {
@@ -66,7 +59,7 @@ export function useNotificationScheduler() {
       if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return
 
       const now = new Date()
-      const today = todayKey(now)
+      const today = localDateKey(now)
       const reminders = await remindersRepo.list()
 
       if (location) {
@@ -74,7 +67,7 @@ export function useNotificationScheduler() {
         for (const prayer of Object.keys(PRAYER_LABELS) as PrayerName[]) {
           const reminder = reminders.find((r) => r.kind === 'prayer' && r.prayerName === prayer)
           if (!reminder?.enabled) continue
-          const alreadyFiredToday = reminder.lastFiredAt && todayKey(new Date(reminder.lastFiredAt)) === today
+          const alreadyFiredToday = reminder.lastFiredAt && localDateKey(new Date(reminder.lastFiredAt)) === today
           if (alreadyFiredToday) continue
           const triggerAt = new Date(times[prayer].getTime() + reminder.offsetMinutes * 60_000)
           if (now >= triggerAt && now.getTime() - triggerAt.getTime() < 15 * 60_000) {
@@ -88,7 +81,7 @@ export function useNotificationScheduler() {
       for (const category of Object.keys(DAILY_WINDOWS) as DailyReminderCategory[]) {
         const reminder = reminders.find((r) => r.kind === 'daily' && r.dailyCategory === category)
         if (!reminder?.enabled) continue
-        const alreadyFiredToday = reminder.lastFiredAt && todayKey(new Date(reminder.lastFiredAt)) === today
+        const alreadyFiredToday = reminder.lastFiredAt && localDateKey(new Date(reminder.lastFiredAt)) === today
         if (alreadyFiredToday) continue
         const { start, end } = DAILY_WINDOWS[category]
         if (now.getHours() >= start && now.getHours() < end) {

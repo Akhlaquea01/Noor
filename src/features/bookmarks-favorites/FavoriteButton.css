@@ -1,0 +1,27 @@
+.favorite-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.favorite-button:hover {
+  background: var(--glass-border);
+  color: var(--color-text);
+}
+
+.favorite-button--active {
+  color: var(--color-gold);
+}
+
+.favorite-button:focus-visible {
+  outline: 2px solid var(--grad-teal-light);
+  outline-offset: 2px;
+}

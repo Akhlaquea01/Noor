@@ -46,9 +46,31 @@
 .article-list-page__row {
   display: flex;
   align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-3) var(--space-4) var(--space-4);
+}
+
+.article-list-page__row-link {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
-  padding: var(--space-4);
+  flex: 1;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-list-page__row-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .article-list-page__row:has(.article-list-page__row-link:hover) {
+    border-color: rgba(184, 230, 138, 0.4);
+    background: rgba(184, 230, 138, 0.05);
+  }
 }
 
 .article-list-page__row strong {

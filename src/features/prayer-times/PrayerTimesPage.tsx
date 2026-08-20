@@ -26,6 +26,13 @@ export function PrayerTimesPage() {
         </p>
       )}
 
+      {locationSource === 'manual' && (
+        <p className="prayer-times-page__manual-note">
+          Manual location uses a fixed UTC offset and doesn't adjust for daylight saving time — if this location
+          observes DST, times may be off by an hour part of the year.
+        </p>
+      )}
+
       {loading && <p className="prayer-times-page__status">Getting location…</p>}
       {error && !todayTimes && (
         <GlassCard className="prayer-times-page__error">

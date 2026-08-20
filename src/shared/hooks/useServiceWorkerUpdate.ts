@@ -18,6 +18,14 @@ export function useServiceWorkerUpdate() {
       onOfflineReady() {
         setOfflineReady(true)
       },
+      // Without this, a failed registration (a bug in the SW script, a
+      // browser blocking it in a privacy mode, a storage/quota error) is
+      // completely silent — no precaching happens, the app quietly stops
+      // being offline-first, and there's zero trail to diagnose an "it
+      // doesn't work offline for me" report against.
+      onRegisterError(error) {
+        console.error('Service worker registration failed:', error)
+      },
     })
     setUpdateSW(() => update)
   }, [])

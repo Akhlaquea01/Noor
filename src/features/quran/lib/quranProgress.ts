@@ -1,5 +1,6 @@
 import { quranProgressRepo, readingSessionsRepo } from '../../../shared/db/repositories'
 import { useQuranProgressStore } from '../../../shared/state/quranProgressStore'
+import { localDateKey } from '../../../shared/lib/dateKey'
 import type { QuranMeta } from '../types'
 
 export function toGlobalAyahId(meta: QuranMeta, surah: number, ayah: number): number {
@@ -25,14 +26,10 @@ export function computeNewlyCoveredJuz(meta: QuranMeta, globalAyahIdStart: numbe
     .map((j) => j.juz)
 }
 
-function todayKey(): string {
-  return new Date().toISOString().slice(0, 10)
-}
-
 function isYesterday(dateKey: string): boolean {
   const yesterday = new Date()
   yesterday.setDate(yesterday.getDate() - 1)
-  return dateKey === yesterday.toISOString().slice(0, 10)
+  return dateKey === localDateKey(yesterday)
 }
 
 interface RecordReadingArgs {
@@ -70,7 +67,7 @@ export async function recordReadingProgress({ meta, surah, ayahStart, ayahEnd, s
   const newlyCoveredJuz = computeNewlyCoveredJuz(meta, globalAyahIdStart, globalAyahId)
   const completedJuz = Array.from(new Set([...current.completedJuz, ...newlyCoveredJuz])).sort((a, b) => a - b)
 
-  const today = todayKey()
+  const today = localDateKey(new Date())
   let currentStreakCount = current.currentStreakCount
   let longestStreak = current.longestStreak
   if (current.streakLastDate !== today) {

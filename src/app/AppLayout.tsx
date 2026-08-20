@@ -44,7 +44,7 @@ const SIDEBAR_SECTIONS = [
   { to: '/calendar', label: 'Calendar', Icon: CalendarDays },
   { to: '/blogs', label: 'Blogs & Stories', Icon: Newspaper },
   { to: '/downloads', label: 'Offline Library', Icon: Download },
-  { to: '/bookmarks', label: 'Bookmarks', Icon: Bookmark },
+  { to: '/bookmarks', label: 'Bookmarks & Favorites', Icon: Bookmark },
 ]
 
 export function AppLayout() {
