@@ -1,10 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="96" fill="#0f5132"/>
-  <path d="M 320 96
-           A 168 168 0 1 0 320 416
-           A 136 136 0 1 1 320 96 Z"
-        fill="#f5f0e1"/>
-  <g fill="#f5f0e1">
-    <polygon points="392,150 402,178 432,178 408,196 417,224 392,207 367,224 376,196 352,178 382,178" />
-  </g>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c4a40"/>
+      <stop offset="1" stop-color="#071d1b"/>
+    </linearGradient>
+    <mask id="crescent-mask">
+      <rect width="512" height="512" fill="black"/>
+      <circle cx="256" cy="256" r="148" fill="white"/>
+      <circle cx="308" cy="216" r="128" fill="black"/>
+    </mask>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="148" fill="#b8e68a" mask="url(#crescent-mask)"/>
+  <polygon
+    points="350,153 355.3,167.7 370.9,168.2 358.6,177.8 362.9,192.8 350,184 337.1,192.8 341.4,177.8 329.1,168.2 344.7,167.7"
+    fill="#d9bd72"
+  />
 </svg>

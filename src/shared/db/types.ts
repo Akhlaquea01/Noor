@@ -33,6 +33,11 @@ export interface UserPreferences {
   // starts playing as soon as a surah with audio opens, and whether it
   // continues into the next surah's audio automatically when one finishes.
   autoplayAudio: boolean
+  // Plays a short synthesized chime alongside prayer/daily reminder
+  // notifications. Defaults on — unlike autoplayAudio (a longer recitation
+  // a user might not expect), this only plays for a notification category
+  // the user has already explicitly enabled.
+  notificationSound: boolean
 }
 
 export const DEFAULT_USER_PREFERENCES: UserPreferences = {
@@ -48,6 +53,7 @@ export const DEFAULT_USER_PREFERENCES: UserPreferences = {
   dailyGoal: { type: 'pages', amount: 1 },
   distanceUnit: 'km',
   autoplayAudio: false,
+  notificationSound: true,
 }
 
 export interface QuranProgressRecord {

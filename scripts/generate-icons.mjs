@@ -27,7 +27,7 @@ for (const t of targets) {
         bottom: Math.round((size - inner) / 2),
         left: Math.round((size - inner) / 2),
         right: Math.round((size - inner) / 2),
-        background: '#0f5132',
+        background: '#071d1b',
       });
   }
   await pipeline.png().toFile(path.join(outDir, t.name));

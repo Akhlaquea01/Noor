@@ -1,7 +1,10 @@
+import { Volume2 } from 'lucide-react'
 import { GlassCard } from '../../shared/ui/GlassCard'
 import { NotificationCapabilityBanner } from './NotificationCapabilityBanner'
 import { useNotificationCapabilities } from './hooks/useNotificationCapabilities'
 import { useReminders } from './hooks/useReminders'
+import { usePreferencesStore } from '../../shared/state/preferencesStore'
+import { playChime } from './lib/chime'
 import { PRAYER_LABELS } from '../prayer-times/lib/calculatePrayerTimes'
 import type { PrayerName } from '../prayer-times/lib/calculatePrayerTimes'
 import type { DailyReminderCategory } from '../../shared/db/types'
@@ -18,6 +21,8 @@ const DAILY_CATEGORIES: { id: DailyReminderCategory; label: string; hint: string
 export function SettingsNotificationsPage() {
   const { capabilities } = useNotificationCapabilities()
   const { get, upsert } = useReminders()
+  const notificationSound = usePreferencesStore((s) => s.preferences.notificationSound)
+  const updatePreferences = usePreferencesStore((s) => s.update)
   const disabled = capabilities.tier !== 'full' || capabilities.permission !== 'granted'
 
   return (
@@ -25,6 +30,24 @@ export function SettingsNotificationsPage() {
       <h1>Notifications & Reminders</h1>
 
       <NotificationCapabilityBanner />
+
+      <GlassCard as="section" className="settings-notifications-page__section">
+        <div className="settings-notifications-page__row">
+          <div className="settings-notifications-page__row-label">
+            <strong>Notification sound</strong>
+            <span>A short chime plays alongside prayer and daily reminders.</span>
+          </div>
+          <input
+            type="checkbox"
+            checked={notificationSound}
+            onChange={(e) => void updatePreferences({ notificationSound: e.target.checked })}
+            aria-label="Notification sound"
+          />
+        </div>
+        <button type="button" className="settings-notifications-page__preview" onClick={() => void playChime()}>
+          <Volume2 size={14} aria-hidden="true" /> Preview sound
+        </button>
+      </GlassCard>
 
       <GlassCard as="section" className="settings-notifications-page__section">
         <h2>Prayer Notifications</h2>

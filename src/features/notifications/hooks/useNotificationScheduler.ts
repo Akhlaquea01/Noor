@@ -6,12 +6,20 @@ import { touchSyncMeta } from '../../../shared/db/syncMeta'
 import { calculatePrayerTimes, PRAYER_LABELS } from '../../prayer-times/lib/calculatePrayerTimes'
 import type { PrayerName } from '../../prayer-times/lib/calculatePrayerTimes'
 import { detectCapabilities } from '../lib/capabilities'
+import { playChime } from '../lib/chime'
 import type { DailyReminderCategory } from '../../../shared/db/types'
 
-const DAILY_TRIGGER_HOURS: Record<DailyReminderCategory, number> = {
-  morning: 7,
-  evening: 18,
-  night: 21,
+// Each category fires only inside its own window, not "any time after the
+// start hour" — the bug this replaces: `now.getHours() >= startHour` with no
+// upper bound meant that if the app wasn't opened before 7am, the *next*
+// time it opened (say, 5:48pm) it would immediately fire "Morning Adhkar"
+// then, because the hour-check was still trivially true and the reminder
+// hadn't fired yet that day. A missed window should mean "skip today," not
+// "fire late and wrong."
+const DAILY_WINDOWS: Record<DailyReminderCategory, { start: number; end: number }> = {
+  morning: { start: 6, end: 10 },
+  evening: { start: 17, end: 19 },
+  night: { start: 20, end: 23 },
 }
 
 const DAILY_MESSAGES: Record<DailyReminderCategory, string> = {
@@ -35,6 +43,12 @@ async function showReminder(title: string, body: string) {
     await registration.showNotification(title, { body, icon: '/icons/icon-192.png' })
   } else {
     new Notification(title, { body, icon: '/icons/icon-192.png' })
+  }
+  // Read live (not via a hook — this runs from a module-level function, not
+  // a component) so a preference change takes effect on the very next
+  // reminder without needing the scheduler's effect to re-run.
+  if (usePreferencesStore.getState().preferences.notificationSound) {
+    void playChime()
   }
 }
 
@@ -71,12 +85,13 @@ export function useNotificationScheduler() {
         }
       }
 
-      for (const category of Object.keys(DAILY_TRIGGER_HOURS) as DailyReminderCategory[]) {
+      for (const category of Object.keys(DAILY_WINDOWS) as DailyReminderCategory[]) {
         const reminder = reminders.find((r) => r.kind === 'daily' && r.dailyCategory === category)
         if (!reminder?.enabled) continue
         const alreadyFiredToday = reminder.lastFiredAt && todayKey(new Date(reminder.lastFiredAt)) === today
         if (alreadyFiredToday) continue
-        if (now.getHours() >= DAILY_TRIGGER_HOURS[category]) {
+        const { start, end } = DAILY_WINDOWS[category]
+        if (now.getHours() >= start && now.getHours() < end) {
           await showReminder('Noor', DAILY_MESSAGES[category])
           const key = `daily:${category}`
           await remindersRepo.put(key, touchSyncMeta({ ...reminder, lastFiredAt: now.getTime() }))
