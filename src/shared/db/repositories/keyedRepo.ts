@@ -9,6 +9,7 @@ type KeyedStoreName =
   | 'reminders'
   | 'articleProgress'
   | 'pilgrimageProgress'
+  | 'prayerLog'
 
 // Factory for out-of-line keyed collection stores where the caller derives
 // the key itself (uuid for bookmarks/favorites/downloads/reminders, a

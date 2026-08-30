@@ -14,10 +14,12 @@ import type {
   AppMeta,
   ArticleProgress,
   PilgrimageProgressRecord,
+  PrayerLogRecord,
+  PrayerStreakRecord,
 } from './types'
 
 const DB_NAME = 'noor-db'
-const DB_VERSION = 2
+const DB_VERSION = 3
 
 // Singleton stores use this fixed out-of-line key — there's only ever one
 // record (preferences, current progress, etc.), keyed uniformly so the
@@ -47,6 +49,8 @@ interface NoorDB extends DBSchema {
   appMeta: { key: string; value: AppMeta }
   articleProgress: { key: string; value: ArticleProgress }
   pilgrimageProgress: { key: string; value: PilgrimageProgressRecord; indexes: { bySection: string } }
+  prayerLog: { key: string; value: PrayerLogRecord; indexes: { byDate: string } }
+  prayerStreak: { key: string; value: PrayerStreakRecord }
 }
 
 let dbPromise: Promise<IDBPDatabase<NoorDB>> | null = null
@@ -108,6 +112,13 @@ export function getDB(): Promise<IDBPDatabase<NoorDB>> {
         if (!db.objectStoreNames.contains('pilgrimageProgress')) {
           const store = db.createObjectStore('pilgrimageProgress')
           store.createIndex('bySection', 'section')
+        }
+        if (!db.objectStoreNames.contains('prayerLog')) {
+          const store = db.createObjectStore('prayerLog')
+          store.createIndex('byDate', 'dateKey')
+        }
+        if (!db.objectStoreNames.contains('prayerStreak')) {
+          db.createObjectStore('prayerStreak')
         }
       },
     })

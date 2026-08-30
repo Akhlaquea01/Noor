@@ -3,6 +3,7 @@ import { RouterProvider } from 'react-router-dom'
 import { router } from './app/router'
 import { usePreferencesStore } from './shared/state/preferencesStore'
 import { useQuranProgressStore } from './shared/state/quranProgressStore'
+import { usePrayerStreakStore } from './shared/state/prayerStreakStore'
 import { useApplyPreferences } from './shared/hooks/useApplyPreferences'
 import { useNotificationScheduler } from './features/notifications/hooks/useNotificationScheduler'
 import { appMetaRepo } from './shared/db/repositories'
@@ -14,6 +15,7 @@ function App() {
   useEffect(() => {
     void usePreferencesStore.getState().hydrate()
     void useQuranProgressStore.getState().hydrate()
+    void usePrayerStreakStore.getState().hydrate()
     void appMetaRepo.ensureInitialized()
   }, [])
 

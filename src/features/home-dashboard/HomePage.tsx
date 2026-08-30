@@ -22,6 +22,7 @@ import {
 import { GlassCard } from '../../shared/ui/GlassCard'
 import { usePreferencesStore } from '../../shared/state/preferencesStore'
 import { useQuranProgressStore } from '../../shared/state/quranProgressStore'
+import { usePrayerStreakStore } from '../../shared/state/prayerStreakStore'
 import { getQuranMeta } from '../quran/api/quranContent'
 import { getVerseOfTheDay } from '../duas/api/duaContent'
 import { getAllArticles } from '../articles/api/articleContent'
@@ -70,14 +71,13 @@ const QUICK_ACTIONS = [
   { to: '/duas', label: 'Duas', detail: 'Daily collection', Icon: HandHeart },
   { to: '/tasbih', label: 'Tasbih', detail: 'Keep count', Icon: CircleDot },
   { to: '/qibla', label: 'Qibla', detail: 'Find direction', Icon: Compass },
-  { to: '/calendar', label: 'Calendar', detail: 'Hijri dates', Icon: CalendarDays },
+  { to: '/calendar', label: 'Calendar', detail: 'Hijri dates & prayer log', Icon: CalendarDays },
   { to: '/blogs', label: 'Blogs & Stories', detail: 'Read & learn', Icon: Newspaper },
   { to: '/downloads', label: 'Offline Library', detail: 'Downloads', Icon: Download },
   { to: '/bookmarks', label: 'Bookmarks', detail: 'Saved for later', Icon: Bookmark },
 ]
 
 const dateLabelFormatter = new Intl.DateTimeFormat('en', { weekday: 'long', day: 'numeric', month: 'long' })
-const timeFormatter = new Intl.DateTimeFormat('en', { hour: 'numeric', minute: '2-digit' })
 
 // "Continue Quran" and the prayer pills subscribe to reactive stores/hooks
 // (not one-off fetches) so they update immediately rather than racing async
@@ -85,6 +85,7 @@ const timeFormatter = new Intl.DateTimeFormat('en', { hour: 'numeric', minute: '
 // which previously had a working route but no menu entry point anywhere.
 export function HomePage() {
   const progress = useQuranProgressStore((s) => s.progress)
+  const prayerStreak = usePrayerStreakStore((s) => s.streak)
   const streakEnabled = usePreferencesStore((s) => s.preferences.streakEnabled)
   const [meta, setMeta] = useState<QuranMeta | null>(null)
   const [verse, setVerse] = useState<Dua | null>(null)
@@ -193,7 +194,7 @@ export function HomePage() {
                   </span>
                   <div>
                     <strong>{PRAYER_LABELS[name]}</strong>
-                    <small>{timeFormatter.format(time)}</small>
+                    <small>{formatPrayerTime(time, utcOffsetHours)}</small>
                   </div>
                 </div>
               )
@@ -207,6 +208,15 @@ export function HomePage() {
           <Flame size={18} aria-hidden="true" className="home-page__streak-icon" />
           <span>
             Quran reading &mdash; <strong>{progress.currentStreakCount}-day</strong> streak
+          </span>
+        </GlassCard>
+      )}
+
+      {streakEnabled && prayerStreak.currentStreakCount > 0 && (
+        <GlassCard glow="gold" className="home-page__streak-card">
+          <Flame size={18} aria-hidden="true" className="home-page__streak-icon" />
+          <span>
+            Prayer streak &mdash; <strong>{prayerStreak.currentStreakCount}-day</strong> streak
           </span>
         </GlassCard>
       )}

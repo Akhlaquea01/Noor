@@ -27,7 +27,7 @@ export function useReminders() {
       : {
           ...createSyncMeta(),
           kind,
-          prayerName: kind === 'prayer' ? (sub as PrayerName) : undefined,
+          prayerName: kind === 'prayer' || kind === 'prayer-log' ? (sub as PrayerName) : undefined,
           dailyCategory: kind === 'daily' ? (sub as DailyReminderCategory) : undefined,
           enabled: true,
           offsetMinutes: 0,

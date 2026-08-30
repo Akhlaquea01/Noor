@@ -1,0 +1,115 @@
+.prayer-day-checklist {
+  margin-top: var(--space-5);
+}
+
+.prayer-day-checklist__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.prayer-day-checklist__header h2 {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.prayer-day-checklist__count {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  padding: 3px var(--space-3);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border);
+}
+
+.prayer-day-checklist__note {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.prayer-day-checklist__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.prayer-day-checklist__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-surface);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  min-height: 48px;
+}
+
+.prayer-day-checklist__row:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.prayer-day-checklist__row--prayed {
+  border-color: rgba(184, 230, 138, 0.4);
+  background: rgba(184, 230, 138, 0.08);
+}
+
+.prayer-day-checklist__row--missed {
+  border-color: rgba(229, 115, 115, 0.3);
+}
+
+.prayer-day-checklist__status-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-full);
+  background: var(--glass-surface-strong);
+  color: var(--color-text-muted);
+}
+
+.prayer-day-checklist__row--prayed .prayer-day-checklist__status-icon {
+  background: rgba(184, 230, 138, 0.18);
+  color: var(--color-primary);
+}
+
+.prayer-day-checklist__row--missed .prayer-day-checklist__status-icon {
+  background: rgba(229, 115, 115, 0.12);
+  color: #e57373;
+}
+
+.prayer-day-checklist__row-label {
+  flex: 1;
+}
+
+.prayer-day-checklist__row-label strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.prayer-day-checklist__row-label small {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  margin-top: 1px;
+}
+
+.prayer-day-checklist__row-status {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.prayer-day-checklist__row--prayed .prayer-day-checklist__row-status {
+  color: var(--color-primary);
+}

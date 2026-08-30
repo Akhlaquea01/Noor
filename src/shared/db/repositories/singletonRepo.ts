@@ -1,9 +1,15 @@
 import { getDB, SINGLETON_KEY } from '../schema'
 import type { NoorDB } from '../schema'
 
-type SingletonStoreName = 'userPreferences' | 'quranProgress' | 'notificationSettings' | 'qiblaCache' | 'appMeta'
+type SingletonStoreName =
+  | 'userPreferences'
+  | 'quranProgress'
+  | 'notificationSettings'
+  | 'qiblaCache'
+  | 'appMeta'
+  | 'prayerStreak'
 
-// Factory for the five stores that only ever hold one record (settings,
+// Factory for the stores that only ever hold one record (settings,
 // current progress snapshot, etc). All feature code goes through repos like
 // this rather than importing `idb` directly — the seam where a future Sync
 // Mode inserts a queue-and-push step without touching feature code.

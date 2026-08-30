@@ -130,6 +130,29 @@ export interface PilgrimageProgressRecord extends SyncMeta {
   doneAt: number | null
 }
 
+// Only "prayed" is ever persisted — a record existing at all means the user
+// confirmed it. "Missed" and "pending" are derived at render time from
+// prayer times + record presence (see features/prayer-tracker/lib/
+// derivePrayerStatus.ts), so un-marking a prayer deletes its record rather
+// than storing a false/missed value.
+export interface PrayerLogRecord extends SyncMeta {
+  dateKey: string
+  prayerName: PrayerName
+  prayedAt: number
+}
+
+export interface PrayerStreakRecord {
+  currentStreakCount: number
+  longestStreak: number
+  streakLastDate: string | null
+}
+
+export const DEFAULT_PRAYER_STREAK: PrayerStreakRecord = {
+  currentStreakCount: 0,
+  longestStreak: 0,
+  streakLastDate: null,
+}
+
 export type DownloadContentType = 'quran-audio' | 'dhikr-audio'
 export type DownloadStatus = 'queued' | 'downloading' | 'complete' | 'error' | 'stale'
 
@@ -146,7 +169,7 @@ export interface DownloadRecord extends SyncMeta {
   version: string
 }
 
-export type ReminderKind = 'prayer' | 'daily'
+export type ReminderKind = 'prayer' | 'daily' | 'prayer-log'
 export type PrayerName = 'fajr' | 'dhuhr' | 'asr' | 'maghrib' | 'isha'
 // 'afternoon' was dropped: it only ever meant "Salah & Dhikr reminder",
 // which duplicated the Asr toggle already in the Prayer Notifications

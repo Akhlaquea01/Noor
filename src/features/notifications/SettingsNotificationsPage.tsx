@@ -83,6 +83,47 @@ export function SettingsNotificationsPage() {
       </GlassCard>
 
       <GlassCard as="section" className="settings-notifications-page__section">
+        <h2>Prayer Log Reminders</h2>
+        <p className="settings-notifications-page__section-hint">
+          A nudge to log a prayer if it's still unmarked a while after its time — cancels itself the moment you log
+          it.
+        </p>
+        {PRAYERS.map((prayer) => {
+          const reminder = get('prayer-log', prayer)
+          return (
+            <div key={prayer} className="settings-notifications-page__row">
+              <div className="settings-notifications-page__row-label">
+                <strong>{PRAYER_LABELS[prayer]}</strong>
+                {reminder?.enabled && (
+                  <select
+                    disabled={disabled}
+                    value={reminder.offsetMinutes}
+                    onChange={(e) => void upsert('prayer-log', prayer, { offsetMinutes: Number(e.target.value) })}
+                  >
+                    <option value={15}>15 min after</option>
+                    <option value={30}>30 min after</option>
+                    <option value={60}>60 min after</option>
+                  </select>
+                )}
+              </div>
+              <input
+                type="checkbox"
+                disabled={disabled}
+                checked={reminder?.enabled ?? false}
+                onChange={(e) =>
+                  void upsert('prayer-log', prayer, {
+                    enabled: e.target.checked,
+                    offsetMinutes: reminder?.offsetMinutes || 30,
+                  })
+                }
+                aria-label={`${PRAYER_LABELS[prayer]} log reminder`}
+              />
+            </div>
+          )
+        })}
+      </GlassCard>
+
+      <GlassCard as="section" className="settings-notifications-page__section">
         <h2>Daily Reminders</h2>
         {DAILY_CATEGORIES.map((cat) => {
           const reminder = get('daily', cat.id)

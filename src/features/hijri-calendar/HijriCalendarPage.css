@@ -64,10 +64,18 @@
 }
 
 .hijri-calendar-page__cell {
+  position: relative;
+  width: 100%;
   padding: var(--space-3) 0;
   border-radius: var(--radius-sm);
   font-size: 0.85rem;
   font-variant-numeric: tabular-nums;
+  font: inherit;
+  background: none;
+  border: 1px solid transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
 }
 
 .hijri-calendar-page__cell--empty {
@@ -78,6 +86,41 @@
   background: linear-gradient(90deg, var(--grad-teal), var(--grad-teal-light));
   color: #fff;
   font-weight: 700;
+}
+
+.hijri-calendar-page__cell--selected {
+  border-color: var(--color-primary);
+}
+
+.hijri-calendar-page__cell-dot {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: var(--color-text-muted);
+  opacity: 0.5;
+}
+
+.hijri-calendar-page__cell--complete .hijri-calendar-page__cell-dot {
+  background: var(--color-primary);
+  opacity: 1;
+}
+
+.hijri-calendar-page__cell--partial .hijri-calendar-page__cell-dot {
+  background: var(--color-gold);
+  opacity: 1;
+}
+
+.hijri-calendar-page__cell--missed .hijri-calendar-page__cell-dot {
+  background: #e57373;
+  opacity: 0.7;
+}
+
+.hijri-calendar-page__cell--in-progress .hijri-calendar-page__cell-dot {
+  opacity: 0.35;
 }
 
 .hijri-calendar-page__disclaimer {

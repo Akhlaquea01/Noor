@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from '../../../shared/hooks/useLocation'
 import { usePreferencesStore } from '../../../shared/state/preferencesStore'
-import { remindersRepo } from '../../../shared/db/repositories'
+import { remindersRepo, prayerLogRepo } from '../../../shared/db/repositories'
 import { touchSyncMeta } from '../../../shared/db/syncMeta'
 import { calculatePrayerTimes, PRAYER_LABELS } from '../../prayer-times/lib/calculatePrayerTimes'
 import type { PrayerName } from '../../prayer-times/lib/calculatePrayerTimes'
@@ -73,6 +73,26 @@ export function useNotificationScheduler() {
           if (now >= triggerAt && now.getTime() - triggerAt.getTime() < 15 * 60_000) {
             await showReminder(`🕌 ${PRAYER_LABELS[prayer]}`, `It is time for ${PRAYER_LABELS[prayer]}.`)
             const key = `prayer:${prayer}`
+            await remindersRepo.put(key, touchSyncMeta({ ...reminder, lastFiredAt: now.getTime() }))
+          }
+        }
+
+        // "Did you log this prayer?" nudges — distinct from the reminder
+        // above (which just says it's prayer time). Self-cancels the moment
+        // the user logs the prayer, even mid-window, via the loggedToday
+        // check below — not just a same-day lastFiredAt guard.
+        const loggedToday = new Set(
+          (await prayerLogRepo.listByIndex('byDate', today)).map((r) => r.prayerName)
+        )
+        for (const prayer of Object.keys(PRAYER_LABELS) as PrayerName[]) {
+          const reminder = reminders.find((r) => r.kind === 'prayer-log' && r.prayerName === prayer)
+          if (!reminder?.enabled || loggedToday.has(prayer)) continue
+          const alreadyFiredToday = reminder.lastFiredAt && localDateKey(new Date(reminder.lastFiredAt)) === today
+          if (alreadyFiredToday) continue
+          const triggerAt = new Date(times[prayer].getTime() + reminder.offsetMinutes * 60_000)
+          if (now >= triggerAt && now.getTime() - triggerAt.getTime() < 15 * 60_000) {
+            await showReminder(`🕌 Log ${PRAYER_LABELS[prayer]}`, `Did you pray ${PRAYER_LABELS[prayer]}? Tap to log it.`)
+            const key = `prayer-log:${prayer}`
             await remindersRepo.put(key, touchSyncMeta({ ...reminder, lastFiredAt: now.getTime() }))
           }
         }
