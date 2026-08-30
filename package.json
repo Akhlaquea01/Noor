@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "Akhlaque Ahmad <akhlaquea01@gmail.com>",
   "scripts": {
     "dev": "npm run build:content && vite",
     "build": "npm run build:content && tsc -b && vite build",

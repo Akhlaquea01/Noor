@@ -194,6 +194,14 @@ export function SettingsPage() {
       </GlassCard>
 
       <GlassCard as="section" className="settings-page__section settings-page__about">
+        <h2>About</h2>
+        <p>
+          Noor is developed by Akhlaque Ahmad. Questions or feedback are welcome at{' '}
+          <a href="mailto:akhlaquea01@gmail.com">akhlaquea01@gmail.com</a>.
+        </p>
+      </GlassCard>
+
+      <GlassCard as="section" className="settings-page__section settings-page__about">
         <h2>Content Sources</h2>
         <p>
           Quran Arabic text, English transliteration, and translation (Saheeh International) via{' '}
