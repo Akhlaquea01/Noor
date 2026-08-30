@@ -1,0 +1,319 @@
+{
+  "categories": [
+    { "id": "comprehensive", "label": "Comprehensive" },
+    { "id": "forgiveness", "label": "Forgiveness & Mercy" },
+    { "id": "guidance", "label": "Guidance & Steadfastness" },
+    { "id": "family", "label": "Family & Provision" },
+    { "id": "protection", "label": "Protection & Relief" },
+    { "id": "daily-life", "label": "Daily Life" },
+    { "id": "death", "label": "Death & the Deceased" }
+  ],
+  "duas": [
+    {
+      "id": "dua-2-201",
+      "categoryId": "comprehensive",
+      "title": "For Good in This Life and the Next",
+      "surah": 2,
+      "ayahStart": 201,
+      "ayahEnd": 201
+    },
+    {
+      "id": "dua-2-286",
+      "categoryId": "forgiveness",
+      "title": "Against Forgetfulness and Mistakes",
+      "surah": 2,
+      "ayahStart": 286,
+      "ayahEnd": 286
+    },
+    {
+      "id": "dua-3-147",
+      "categoryId": "forgiveness",
+      "title": "For Forgiveness of Sins",
+      "surah": 3,
+      "ayahStart": 147,
+      "ayahEnd": 147
+    },
+    {
+      "id": "dua-14-41",
+      "categoryId": "forgiveness",
+      "title": "For Parents and the Believers",
+      "surah": 14,
+      "ayahStart": 41,
+      "ayahEnd": 41
+    },
+    {
+      "id": "dua-7-23",
+      "categoryId": "forgiveness",
+      "title": "Dua of Adam and Hawwa",
+      "surah": 7,
+      "ayahStart": 23,
+      "ayahEnd": 23
+    },
+    {
+      "id": "dua-3-8",
+      "categoryId": "guidance",
+      "title": "Against Hearts Deviating",
+      "surah": 3,
+      "ayahStart": 8,
+      "ayahEnd": 8
+    },
+    {
+      "id": "dua-20-25",
+      "categoryId": "guidance",
+      "title": "Dua of Musa for Ease",
+      "surah": 20,
+      "ayahStart": 25,
+      "ayahEnd": 28
+    },
+    {
+      "id": "dua-17-24",
+      "categoryId": "family",
+      "title": "For Mercy Upon One's Parents",
+      "surah": 17,
+      "ayahStart": 24,
+      "ayahEnd": 24
+    },
+    {
+      "id": "dua-25-74",
+      "categoryId": "family",
+      "title": "For a Righteous Family",
+      "surah": 25,
+      "ayahStart": 74,
+      "ayahEnd": 74
+    },
+    {
+      "id": "dua-28-24",
+      "categoryId": "family",
+      "title": "Dua of Musa for Provision",
+      "surah": 28,
+      "ayahStart": 24,
+      "ayahEnd": 24
+    },
+    {
+      "id": "dua-21-87",
+      "categoryId": "protection",
+      "title": "Dua of Yunus in Distress",
+      "surah": 21,
+      "ayahStart": 87,
+      "ayahEnd": 87
+    },
+    {
+      "id": "dua-23-97",
+      "categoryId": "protection",
+      "title": "Refuge from the Whispers of Shayateen",
+      "surah": 23,
+      "ayahStart": 97,
+      "ayahEnd": 98
+    },
+    {
+      "id": "dua-3-173",
+      "categoryId": "protection",
+      "title": "Sufficiency in Difficulty",
+      "surah": 3,
+      "ayahStart": 173,
+      "ayahEnd": 173
+    },
+    {
+      "id": "dua-anxiety-grief",
+      "categoryId": "protection",
+      "type": "hadith",
+      "title": "For Anxiety and Grief",
+      "reference": "Sahih al-Bukhari 6369",
+      "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْبُخْلِ، وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ",
+      "transliteration": "Allahumma inni a'udhu bika minal-hammi wal-hazan, wal-'ajzi wal-kasal, wal-jubni wal-bukhl, wa dala'id-dayni wa ghalabatir-rijal",
+      "translation": "Aey Allah! Main tere paas panah maangta hoon fikr aur gham se, na-taqati aur susti se, buzdili aur kanjoosi se, karz ke bojh se aur logon ke ghalba (dabao) se."
+    },
+    {
+      "id": "dua-anger",
+      "categoryId": "protection",
+      "type": "hadith",
+      "title": "When Angry",
+      "reference": "Sahih al-Bukhari 6115",
+      "arabic": "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+      "transliteration": "A'udhu billahi minash-shaytanir-rajim",
+      "translation": "Main dhutkare hue shaytan se Allah ki panah maangta hoon."
+    },
+    {
+      "id": "dua-waking-up",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "Upon Waking Up",
+      "reference": "Sahih al-Bukhari 6314",
+      "arabic": "الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
+      "transliteration": "Alhamdu lillahil-ladhi ahyana ba'da ma amatana wa ilayhin-nushur",
+      "translation": "Sari tareef Allah ke liye hai jisne hamein maut (jaisi neend) ke baad zinda kiya, aur usi ki taraf lautna hai."
+    },
+    {
+      "id": "dua-before-sleeping",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "Before Sleeping",
+      "reference": "Sahih al-Bukhari 6324",
+      "arabic": "بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",
+      "transliteration": "Bismika Allahumma amutu wa ahya",
+      "translation": "Aey Allah! Tere naam se main marta hoon aur jeeta hoon."
+    },
+    {
+      "id": "dua-before-eating",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "Before Eating",
+      "reference": "Sunan Abi Dawud 3767; Jami' at-Tirmidhi 1858",
+      "arabic": "بِسْمِ اللَّهِ",
+      "transliteration": "Bismillah",
+      "translation": "Allah ke naam se.",
+      "note": "If you forget to say it before starting, say \"Bismillahi fi awwalihi wa akhirih\" (In the name of Allah, at its beginning and its end) as soon as you remember."
+    },
+    {
+      "id": "dua-after-eating",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "After Eating",
+      "reference": "Sunan Abi Dawud 3850",
+      "arabic": "الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",
+      "transliteration": "Alhamdu lillahil-ladhi at'amani hadha wa razaqanihi min ghayri hawlin minni wa la quwwah",
+      "translation": "Sari tareef Allah ke liye hai jisne mujhe ye khilaya aur bina meri kisi taqat-o-qoowat ke mujhe ye rizq diya."
+    },
+    {
+      "id": "dua-entering-home",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "Entering the Home",
+      "reference": "Sunan Abi Dawud 5096",
+      "arabic": "بِسْمِ اللَّهِ وَلَجْنَا، وَبِسْمِ اللَّهِ خَرَجْنَا، وَعَلَى اللَّهِ رَبِّنَا تَوَكَّلْنَا",
+      "transliteration": "Bismillahi walajna, wa bismillahi kharajna, wa 'ala Allahi Rabbina tawakkalna",
+      "translation": "Allah ke naam se hum andar aaye, aur Allah ke naam se hum bahar jaate hain, aur apne Rab Allah hi par hamara bharosa hai.",
+      "note": "Followed by greeting the household with Salam."
+    },
+    {
+      "id": "dua-leaving-home",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "Leaving the Home",
+      "reference": "Sunan Abi Dawud 5095; Jami' at-Tirmidhi 3426",
+      "arabic": "بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+      "transliteration": "Bismillahi tawakkaltu 'ala Allahi wa la hawla wa la quwwata illa billah",
+      "translation": "Allah ke naam se, maine Allah par bharosa kiya, aur Allah ke siwa koi taqat aur qoowat nahi."
+    },
+    {
+      "id": "dua-entering-masjid",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "Entering the Masjid",
+      "reference": "Sahih Muslim 713",
+      "arabic": "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+      "transliteration": "Allahumma-ftah li abwaba rahmatik",
+      "translation": "Aey Allah! Mere liye apni rahmat ke darwaze khol de."
+    },
+    {
+      "id": "dua-leaving-masjid",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "Leaving the Masjid",
+      "reference": "Sahih Muslim 713",
+      "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",
+      "transliteration": "Allahumma inni as'aluka min fadlik",
+      "translation": "Aey Allah! Main tujh se tera fazl (fazl-o-karam) maangta hoon."
+    },
+    {
+      "id": "dua-entering-bathroom",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "Entering the Bathroom",
+      "reference": "Sahih al-Bukhari 142",
+      "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",
+      "transliteration": "Allahumma inni a'udhu bika minal-khubthi wal-khaba'ith",
+      "translation": "Aey Allah! Main tere paas naapak jinnaat, mard aur aurat, dono se panah maangta hoon."
+    },
+    {
+      "id": "dua-leaving-bathroom",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "Leaving the Bathroom",
+      "reference": "Sunan Abi Dawud 30; Sunan Ibn Majah 300",
+      "arabic": "غُفْرَانَكَ",
+      "transliteration": "Ghufranak",
+      "translation": "Main teri maghfirat (bakhshish) chahta hoon."
+    },
+    {
+      "id": "dua-new-clothes",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "Wearing New Clothes",
+      "reference": "Sunan Abi Dawud 4020; Jami' at-Tirmidhi 1767",
+      "arabic": "اللَّهُمَّ لَكَ الْحَمْدُ أَنْتَ كَسَوْتَنِيهِ أَسْأَلُكَ مِنْ خَيْرِهِ وَخَيْرِ مَا صُنِعَ لَهُ وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا صُنِعَ لَهُ",
+      "transliteration": "Allahumma lakal-hamdu anta kasawtanihi, as'aluka min khayrihi wa khayri ma suni'a lah, wa a'udhu bika min sharrihi wa sharri ma suni'a lah",
+      "translation": "Aey Allah! Sari tareef teri hai, tu ne hi mujhe ye pehnaya hai. Main is ki bhalai aur is ke maqsad ki bhalai maangta hoon, aur is ki buraai aur is ke maqsad ki buraai se panah maangta hoon."
+    },
+    {
+      "id": "dua-new-moon",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "On Sighting the New Moon",
+      "reference": "Jami' at-Tirmidhi 3451",
+      "arabic": "اللَّهُ أَكْبَرُ، اللَّهُمَّ أَهِلَّهُ عَلَيْنَا بِالْأَمْنِ وَالْإِيمَانِ، وَالسَّلَامَةِ وَالْإِسْلَامِ، وَالتَّوْفِيقِ لِمَا تُحِبُّ رَبَّنَا وَتَرْضَى، رَبُّنَا وَرَبُّكَ اللَّهُ",
+      "transliteration": "Allahu Akbar. Allahumma ahillahu 'alayna bil-amni wal-iman, was-salamati wal-Islam, wat-tawfiqi lima tuhibbu Rabbana wa tarda. Rabbuna wa Rabbukal-lah",
+      "translation": "Allah sab se bada hai. Aey Allah! Is chaand ko hum par amn-o-iman, salamati aur Islam, aur un kaamon ki taufeeq ke saath tulu farma jinhein hamara Rab pasand aur pasand karta hai. Hamara aur tera Rab Allah hai."
+    },
+    {
+      "id": "dua-sneezing",
+      "categoryId": "daily-life",
+      "type": "hadith",
+      "title": "When Sneezing",
+      "reference": "Sahih al-Bukhari 6224",
+      "arabic": "الْحَمْدُ لِلَّهِ",
+      "transliteration": "Alhamdulillah",
+      "translation": "Sari tareef Allah ke liye hai.",
+      "note": "Those who hear it should reply \"Yarhamukallah\" (Allah have mercy on you); the sneezer then replies \"Yahdikumullahu wa yuslihu balakum\" (May Allah guide you and set your affairs right)."
+    },
+    {
+      "id": "dua-2-156",
+      "categoryId": "death",
+      "title": "Upon Hearing of a Calamity or Death",
+      "surah": 2,
+      "ayahStart": 156,
+      "ayahEnd": 156
+    },
+    {
+      "id": "dua-calamity-reward",
+      "categoryId": "death",
+      "type": "hadith",
+      "title": "After Reciting Istirja (Following the Verse Above)",
+      "reference": "Sahih Muslim 918",
+      "arabic": "اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي وَأَخْلِفْ لِي خَيْرًا مِنْهَا",
+      "transliteration": "Allahumma-jurni fi museebati wakhluf li khayran minha",
+      "translation": "Aey Allah! Mujhe meri museebat mein ajr (sawab) de aur mujhe iske badle behtar ata farma."
+    },
+    {
+      "id": "dua-for-deceased",
+      "categoryId": "death",
+      "type": "hadith",
+      "title": "For the Deceased (Salat al-Janazah)",
+      "reference": "Sahih Muslim 963",
+      "arabic": "اللَّهُمَّ اغْفِرْ لِحَيِّنَا وَمَيِّتِنَا، وَشَاهِدِنَا وَغَائِبِنَا، وَصَغِيرِنَا وَكَبِيرِنَا، وَذَكَرِنَا وَأُنْثَانَا",
+      "transliteration": "Allahumma-ghfir li hayyina wa mayyitina, wa shahidina wa gha'ibina, wa sagheerina wa kabeerina, wa dhakarina wa unthana",
+      "translation": "Aey Allah! Hamare zinda aur hamare murda ko, hamare hazir aur hamare ghaib ko, hamare chhote aur hamare bade ko, hamare mard aur hamari aurat ko bakhsh de."
+    },
+    {
+      "id": "dua-consoling-bereaved",
+      "categoryId": "death",
+      "type": "hadith",
+      "title": "Consoling the Bereaved",
+      "reference": "Sahih al-Bukhari 1284",
+      "arabic": "إِنَّ لِلَّهِ مَا أَخَذَ، وَلَهُ مَا أَعْطَى، وَكُلُّ شَيْءٍ عِنْدَهُ بِأَجَلٍ مُسَمًّى، فَلْتَصْبِرْ وَلْتَحْتَسِبْ",
+      "transliteration": "Inna lillahi ma akhadh, wa lahu ma a'ta, wa kullu shay'in 'indahu bi-ajalin musamma, faltasbir wal-tahtasib",
+      "translation": "Jo Allah ne liya wo usi ka tha, aur jo usne diya wo bhi usi ka tha, aur har cheez ka uske paas ek muqarrar waqt hai. Pas sabr karo aur sawab ki neeyat rakho.",
+      "note": "The Prophet ﷺ sent this message to his own daughter when her son was dying."
+    },
+    {
+      "id": "dua-visiting-grave",
+      "categoryId": "death",
+      "type": "hadith",
+      "title": "Visiting a Grave",
+      "reference": "Sahih Muslim 975",
+      "arabic": "السَّلَامُ عَلَيْكُمْ أَهْلَ الدِّيَارِ مِنَ الْمُؤْمِنِينَ وَالْمُسْلِمِينَ، وَإِنَّا إِنْ شَاءَ اللَّهُ بِكُمْ لَاحِقُونَ، أَسْأَلُ اللَّهَ لَنَا وَلَكُمُ الْعَافِيَةَ",
+      "transliteration": "Assalamu 'alaykum ahlad-diyari minal-mu'minina wal-muslimin, wa inna in sha'a Allahu bikum lahiqun, as'alullaha lana wa lakumul-'afiyah",
+      "translation": "Salamati ho tum par, aey qabron walon, momino aur musalmano! Aur be-shak hum bhi, Allah chahe to, tumse aa milne wale hain. Main Allah se hamare aur tumhare liye aafiyat maangta hoon."
+    }
+  ]
+}

@@ -86,37 +86,54 @@ const metaJson = JSON.stringify({ surahs: surahMeta, juz, totalAyahs: 6236 })
 writeFileSync(path.join(outDir, 'meta.json'), metaJson)
 hasher.update(metaJson)
 
-// Duas: for this pass, sourced only as curated references (surah/ayah
-// range) into the Quran text already built above — see
-// scripts/content-source/quran-duas.json. Resolving text by reference (not
-// retyping it) guarantees the Arabic/translation/transliteration shown for
-// each dua is byte-identical to the verified Quran pipeline. A Hadith-
-// sourced azkar collection (Morning/Evening Adhkar, Sleep, Travel, etc.)
-// was deliberately deferred: a reviewed candidate dataset had accurate,
-// well-cited Arabic text but no trustworthy English translation source, and
-// religious text should not be machine-translated.
+// Duas: two sourcing modes. Quran-sourced duas are curated references
+// (surah/ayah range) resolved against the verified Quran text built above —
+// this guarantees the Arabic/translation/transliteration is byte-identical
+// to that pipeline, never retyped by hand. Hadith-sourced daily-life duas
+// (eating, sleeping, entering the home, death & calamity, etc. — see
+// content-source/duas.json) have no ayah range to resolve, so their
+// Arabic/transliteration/translation are given literally in the source
+// file — hand-verified against well-known hadith collections (Bukhari,
+// Muslim, Abu Dawud, Tirmidhi) rather than machine-translated, and marked
+// translationLang: 'ur' so the UI labels them "Meaning (Urdu)" rather than
+// implying they're the Saheeh International English used for Quran duas.
 const duasOutDir = path.join(root, 'public/data/duas')
 ensureDir(duasOutDir)
-const duasSource = JSON.parse(readFileSync(path.join(__dirname, 'content-source/quran-duas.json'), 'utf-8'))
+const duasSource = JSON.parse(readFileSync(path.join(__dirname, 'content-source/duas.json'), 'utf-8'))
 const surahByNumber = new Map(surahMeta.map((s) => [s.number, s]))
 
 const duasByCategory = new Map(duasSource.categories.map((c) => [c.id, []]))
 for (const dua of duasSource.duas) {
-  const verses = versesBySurah.get(dua.surah)
-  const range = verses.filter((v) => v.id >= dua.ayahStart && v.id <= dua.ayahEnd)
-  const surah = surahByNumber.get(dua.surah)
-  const resolved = {
-    id: dua.id,
-    title: dua.title,
-    reference: dua.ayahStart === dua.ayahEnd
-      ? `Surah ${surah.nameTransliteration} ${dua.surah}:${dua.ayahStart}`
-      : `Surah ${surah.nameTransliteration} ${dua.surah}:${dua.ayahStart}-${dua.ayahEnd}`,
-    surah: dua.surah,
-    ayahStart: dua.ayahStart,
-    ayahEnd: dua.ayahEnd,
-    arabic: range.map((v) => v.text).join(' '),
-    translation: range.map((v) => v.translation).join(' '),
-    transliteration: range.map((v) => v.transliteration).join(' '),
+  let resolved
+  if (dua.type === 'hadith') {
+    resolved = {
+      id: dua.id,
+      title: dua.title,
+      reference: dua.reference,
+      arabic: dua.arabic,
+      translation: dua.translation,
+      transliteration: dua.transliteration,
+      translationLang: 'ur',
+      note: dua.note ?? null,
+    }
+  } else {
+    const verses = versesBySurah.get(dua.surah)
+    const range = verses.filter((v) => v.id >= dua.ayahStart && v.id <= dua.ayahEnd)
+    const surah = surahByNumber.get(dua.surah)
+    resolved = {
+      id: dua.id,
+      title: dua.title,
+      reference: dua.ayahStart === dua.ayahEnd
+        ? `Surah ${surah.nameTransliteration} ${dua.surah}:${dua.ayahStart}`
+        : `Surah ${surah.nameTransliteration} ${dua.surah}:${dua.ayahStart}-${dua.ayahEnd}`,
+      surah: dua.surah,
+      ayahStart: dua.ayahStart,
+      ayahEnd: dua.ayahEnd,
+      arabic: range.map((v) => v.text).join(' '),
+      translation: range.map((v) => v.translation).join(' '),
+      transliteration: range.map((v) => v.transliteration).join(' '),
+      translationLang: 'en',
+    }
   }
   duasByCategory.get(dua.categoryId).push(resolved)
 }
@@ -133,7 +150,7 @@ for (const [categoryId, duas] of duasByCategory) {
   hasher.update(json)
 }
 
-console.log(`Built ${duasSource.duas.length} Quran-derived duas across ${duasSource.categories.length} categories.`)
+console.log(`Built ${duasSource.duas.length} duas (Qur'an and hadith) across ${duasSource.categories.length} categories.`)
 
 // Wudu & Salah: procedural step descriptions are original content (low
 // licensing risk — these are objective ritual steps, not copyrighted text).

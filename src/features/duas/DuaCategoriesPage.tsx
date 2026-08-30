@@ -46,7 +46,7 @@ export function DuaCategoriesPage() {
     <section className="dua-categories-page">
       <h1>Duas</h1>
       <p className="dua-categories-page__note">
-        Supplications from the Qur'an, with Arabic, translation, and transliteration.
+        Supplications from the Qur'an and authentic hadith, with Arabic, translation, and transliteration.
       </p>
 
       <SearchInput value={query} onChange={setQuery} placeholder="Search duas" ariaLabel="Search duas" />

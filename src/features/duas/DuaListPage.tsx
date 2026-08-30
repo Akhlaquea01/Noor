@@ -28,7 +28,11 @@ export function DuaCard({ dua }: { dua: Dua }) {
         {dua.arabic}
       </p>
       <p className="dua-list-page__transliteration">{dua.transliteration}</p>
+      <small className="dua-list-page__translation-label">
+        {dua.translationLang === 'ur' ? 'Meaning (Urdu)' : 'Translation'}
+      </small>
       <p className="dua-list-page__translation">{dua.translation}</p>
+      {dua.note && <p className="dua-list-page__note">{dua.note}</p>}
       <StageSelector stage={stage} onChange={(s) => void setStage(s)} />
     </GlassCard>
   )
