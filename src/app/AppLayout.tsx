@@ -13,6 +13,9 @@ import {
   Newspaper,
   Download,
   Bookmark,
+  ListOrdered,
+  ScrollText,
+  Mountain,
 } from 'lucide-react'
 import { OfflineIndicator } from '../shared/ui/OfflineIndicator'
 import { UpdateBanner } from './UpdateBanner'
@@ -38,6 +41,9 @@ const SIDEBAR_SECTIONS = [
   { to: '/duas', label: 'Duas', Icon: HandHeart },
   { to: '/wudu', label: 'Wudu', Icon: Droplets },
   { to: '/salah', label: 'Salah', Icon: PersonStanding },
+  { to: '/rakat-guide', label: "Rak'ahs Guide", Icon: ListOrdered },
+  { to: '/kalimas', label: 'The 6 Kalimas', Icon: ScrollText },
+  { to: '/hajj-umrah', label: 'Hajj & Umrah', Icon: Mountain },
   { to: '/prayer-times', label: 'Prayer times', Icon: Clock },
   { to: '/qibla', label: 'Qibla', Icon: Compass },
   { to: '/tasbih', label: 'Tasbih', Icon: CircleDot },

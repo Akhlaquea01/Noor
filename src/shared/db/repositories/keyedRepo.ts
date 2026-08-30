@@ -1,7 +1,14 @@
 import { getDB } from '../schema'
 import type { NoorDB } from '../schema'
 
-type KeyedStoreName = 'bookmarks' | 'favorites' | 'learningProgress' | 'downloads' | 'reminders' | 'articleProgress'
+type KeyedStoreName =
+  | 'bookmarks'
+  | 'favorites'
+  | 'learningProgress'
+  | 'downloads'
+  | 'reminders'
+  | 'articleProgress'
+  | 'pilgrimageProgress'
 
 // Factory for out-of-line keyed collection stores where the caller derives
 // the key itself (uuid for bookmarks/favorites/downloads/reminders, a

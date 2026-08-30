@@ -25,6 +25,37 @@
   flex: 1;
 }
 
+.step-card__fiqh-badge {
+  flex-shrink: 0;
+  padding: 3px var(--space-2);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.step-card__fiqh-badge--fard {
+  border-color: rgba(184, 230, 138, 0.4);
+  background: rgba(184, 230, 138, 0.08);
+  color: var(--color-primary);
+}
+
+.step-card__fiqh-badge--wajib {
+  border-color: rgba(217, 189, 114, 0.4);
+  background: rgba(217, 189, 114, 0.08);
+  color: var(--color-gold);
+}
+
+.step-card__fiqh-badge--sunnah {
+  color: var(--color-soft);
+}
+
+.step-card__fiqh-badge--shart {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
 .step-card__listen {
   flex-shrink: 0;
 }
@@ -48,7 +79,29 @@
   font-size: 0.88rem;
 }
 
-.step-card__translation {
+.step-card__translation-block {
   margin: 0 0 var(--space-3);
+}
+
+.step-card__translation-label {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.step-card__translation {
+  margin: 0;
   font-size: 0.92rem;
+}
+
+.step-card__note {
+  margin: 0 0 var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-left: 2px solid var(--glass-border);
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
 }

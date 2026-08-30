@@ -106,7 +106,7 @@ export interface Favorite extends SyncMeta {
   createdAt: number
 }
 
-export type LearningCategory = 'wudu' | 'salah' | 'dua'
+export type LearningCategory = 'wudu' | 'salah' | 'dua' | 'kalima'
 export type LearningStage = 'not_started' | 'learning' | 'practicing' | 'memorized'
 
 export interface LearningProgressRecord extends SyncMeta {
@@ -115,6 +115,19 @@ export interface LearningProgressRecord extends SyncMeta {
   stage: LearningStage
   stageUpdatedAt: number
   practiceCount: number
+}
+
+// A simple done/not-done checklist — distinct from LearningProgress's
+// four-stage memorization flow. This tracks whether a real-world action
+// (e.g. "throw the Jamarat pebbles today") has actually been performed
+// during the trip, not how well a text has been memorized beforehand.
+export type PilgrimageSection = 'prepare' | 'umrah' | 'hajj'
+
+export interface PilgrimageProgressRecord extends SyncMeta {
+  section: PilgrimageSection
+  stepId: string
+  done: boolean
+  doneAt: number | null
 }
 
 export type DownloadContentType = 'quran-audio' | 'dhikr-audio'

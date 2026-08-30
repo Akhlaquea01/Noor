@@ -1,0 +1,93 @@
+{
+  "id": "prepare",
+  "label": "Before You Travel",
+  "description": "Duas for setting out on the journey, and etiquette for visiting Madina Munawwarah. Visiting Madina is a separate, highly recommended act — not one of the rites of Hajj or Umrah, which take place in Makkah.",
+  "disclaimer": "Current practical details — like the Nusuk app permit mentioned for Riyadul Jannah — reflect policy at the time of writing and can change. Confirm the latest requirements with your Hajj/Umrah operator or the Saudi authorities before you travel.",
+  "phases": [
+    {
+      "id": "before-departure",
+      "title": "Preparing for the Journey",
+      "subtitle": null,
+      "steps": [
+        {
+          "id": "clarify-intention",
+          "order": 1,
+          "title": "Clarify Your Intention",
+          "description": "Decide clearly whether you're travelling for Hajj, Umrah, or purely to visit Madina. If it's Hajj, note which type you'll perform (Tamattu', Qiran, or Ifrad) — most pilgrims perform Tamattu', which combines Umrah and Hajj on the same trip — since it changes a few later steps.",
+          "note": null
+        },
+        {
+          "id": "taharah-prepare",
+          "order": 2,
+          "title": "Purify Yourself",
+          "description": "Perform Ghusl or Wudu before setting out.",
+          "note": null
+        },
+        {
+          "id": "nafl-before-travel",
+          "order": 3,
+          "title": "Pray Nafl Before Setting Out",
+          "description": "It's a beautiful Sunnah to pray 2–4 rak'at of Nafl (sometimes called Salatul Hajat or the \"travel prayer\") before leaving home, asking Allah to accept the journey ahead.",
+          "note": null
+        },
+        {
+          "id": "dua-safar",
+          "order": 4,
+          "title": "Dua for Travel (Dua-e-Safar)",
+          "description": "Once you're set to depart, recite the Prophet's ﷺ own supplication for travel.",
+          "note": "Narrated in Sahih Muslim. Adding a personal supplication afterward, in your own words, asking Allah to accept the journey and make it easy, is also encouraged.",
+          "arabic": "اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ، اللَّهُمَّ إِنَّا نَسْأَلُكَ فِي سَفَرِنَا هَذَا الْبِرَّ وَالتَّقْوَى، وَمِنَ الْعَمَلِ مَا تَرْضَى، اللَّهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هَذَا وَاطْوِ عَنَّا بُعْدَهُ، اللَّهُمَّ أَنْتَ الصَّاحِبُ فِي السَّفَرِ وَالْخَلِيفَةُ فِي الْأَهْلِ",
+          "transliteration": "Allahu Akbar, Allahu Akbar, Allahu Akbar. Subhanalladhi sakhkhara lana hadha wa ma kunna lahu muqrinin, wa inna ila Rabbina lamunqalibun. Allahumma inna nas'aluka fi safarina hadhal-birra wat-taqwa, wa minal-'amali ma tarda. Allahumma hawwin 'alayna safarana hadha watwi 'anna bu'dah. Allahumma antas-sahibu fis-safari wal-khalifatu fil-ahl.",
+          "translation": "Allah sab se bada hai (teen baar). Pak hai woh Zaat jisne is sawari ko hamare qaboo mein diya, warna hum khud isse qaboo mein nahi la sakte the, aur be-shak hum apne Rab ki taraf lautne wale hain. Aey Allah! Hum is safar mein tujh se neki aur taqwa maangte hain, aur aisa amal maangte hain jisse tu raazi ho. Aey Allah! Hamara ye safar aasan farma aur iski doori ko hamare liye lapet de. Aey Allah! Tu hi safar mein sathi hai aur ghar walon mein hamari jagah nigehban hai.",
+          "translationLang": "ur"
+        }
+      ]
+    },
+    {
+      "id": "in-madina",
+      "title": "In Madina Munawwarah",
+      "subtitle": "Optional but highly recommended — not part of the Hajj or Umrah rites",
+      "steps": [
+        {
+          "id": "jamaah-prayers",
+          "order": 1,
+          "title": "Pray in Congregation at Masjid an-Nabawi",
+          "description": "Aim to catch Takbeer-e-Oola — the very first Takbir of each congregational prayer — for its especially great reward.",
+          "note": null
+        },
+        {
+          "id": "tahajjud-madina",
+          "order": 2,
+          "title": "Pray Tahajjud",
+          "description": "The last third of the night, prayed in the Prophet's ﷺ own mosque, is an especially blessed time for this.",
+          "note": null
+        },
+        {
+          "id": "salam-rawdah",
+          "order": 3,
+          "title": "Give Salam at the Prophet's ﷺ Grave",
+          "description": "Approach the three windows of the grille with lowered voice and full adab (etiquette).",
+          "note": "At the first window, give salam to the Prophet ﷺ; at the second, to Abu Bakr (رضی اللہ عنہ); at the third, to Umar (رضی اللہ عنہ). When making personal dua — asking Allah for anything — turn to face the Qiblah rather than the grave: the salam alone is directed at the Prophet ﷺ, while all dua is to Allah.",
+          "arabic": "السَّلَامُ عَلَيْكَ يَا رَسُولَ اللَّهِ",
+          "transliteration": "Assalamu 'alayka ya Rasulallah",
+          "translation": "Aap par salamati ho, aey Allah ke Rasool!",
+          "translationLang": "ur"
+        },
+        {
+          "id": "riyadul-jannah",
+          "order": 4,
+          "title": "Pray Nafl in Riyadul Jannah",
+          "description": "The area between the Prophet's ﷺ pulpit (Mimbar) and his house is described in hadith as a garden from the gardens of Paradise. Entry currently requires a free permit booked in advance through the Nusuk app.",
+          "note": null
+        },
+        {
+          "id": "farewell-madina",
+          "order": 5,
+          "title": "Give a Farewell Salam Before Leaving for Makkah",
+          "description": "Visit the grave once more before departing, asking Allah that this isn't your last visit, and repeating the same adab as before.",
+          "note": null
+        }
+      ]
+    }
+  ]
+}

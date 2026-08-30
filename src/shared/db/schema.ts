@@ -13,10 +13,11 @@ import type {
   QiblaCache,
   AppMeta,
   ArticleProgress,
+  PilgrimageProgressRecord,
 } from './types'
 
 const DB_NAME = 'noor-db'
-const DB_VERSION = 1
+const DB_VERSION = 2
 
 // Singleton stores use this fixed out-of-line key — there's only ever one
 // record (preferences, current progress, etc.), keyed uniformly so the
@@ -45,6 +46,7 @@ interface NoorDB extends DBSchema {
   qiblaCache: { key: string; value: QiblaCache }
   appMeta: { key: string; value: AppMeta }
   articleProgress: { key: string; value: ArticleProgress }
+  pilgrimageProgress: { key: string; value: PilgrimageProgressRecord; indexes: { bySection: string } }
 }
 
 let dbPromise: Promise<IDBPDatabase<NoorDB>> | null = null
@@ -102,6 +104,10 @@ export function getDB(): Promise<IDBPDatabase<NoorDB>> {
         }
         if (!db.objectStoreNames.contains('articleProgress')) {
           db.createObjectStore('articleProgress')
+        }
+        if (!db.objectStoreNames.contains('pilgrimageProgress')) {
+          const store = db.createObjectStore('pilgrimageProgress')
+          store.createIndex('bySection', 'section')
         }
       },
     })

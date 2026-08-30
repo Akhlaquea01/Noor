@@ -3,141 +3,252 @@
     {
       "id": "niyyah",
       "title": "Intention (Niyyah)",
-      "description": "Form the intention in your heart to perform wudu for the sake of Allah, purifying yourself before worship. The intention is not spoken aloud."
+      "description": "Form the intention in your heart to perform wudu for the sake of Allah, purifying yourself before worship. Speaking the intention aloud is optional — the dua below is a commonly taught way to voice it.",
+      "fiqhType": "sunnah",
+      "note": "In the Hanafi madhhab, intention is Sunnah for wudu, not Fard — wudu is technically valid without it. The Shafi'i, Maliki, and Hanbali madhahib hold that intention is Fard.",
+      "arabicSource": { "type": "literal", "arabic": "نَوَيْتُ الْوُضُوءَ لِلَّهِ تَعَالَى", "transliteration": "Nawaitu al-wudu'a lillahi ta'ala", "translation": "Maine Allah Ta'ala ke liye wudu karne ki niyyat ki." }
     },
     {
       "id": "bismillah",
       "title": "Say Bismillah",
       "description": "Begin by saying \"In the name of Allah,\" as taught in the Sunnah before starting wudu.",
-      "arabicSource": { "type": "quran", "surah": 1, "ayah": 1 }
+      "fiqhType": "sunnah",
+      "note": "The narrated wording is the short \"Bismillah\", not the full Qur'anic Basmala. Some scholars hold naming Allah before wudu to be Wajib when not forgotten; the majority Hanafi view is Sunnah Mu'akkadah.",
+      "arabicSource": { "type": "literal", "arabic": "بِسْمِ اللَّهِ", "transliteration": "Bismillah", "translation": "Allah ke naam se." }
     },
     {
       "id": "wash-hands",
       "title": "Wash the Hands",
-      "description": "Wash both hands up to the wrists three times, making sure water reaches between the fingers."
+      "description": "Wash both hands up to the wrists three times, making sure water reaches between the fingers.",
+      "fiqhType": "sunnah",
+      "note": null
     },
     {
       "id": "rinse-mouth",
       "title": "Rinse the Mouth",
-      "description": "Take water into the mouth and rinse it thoroughly, three times."
+      "description": "Take water into the mouth and rinse it thoroughly, three times.",
+      "fiqhType": "sunnah",
+      "note": "Sunnah Mu'akkadah in the Hanafi madhhab; some other scholars hold it to be Fard."
     },
     {
       "id": "rinse-nose",
       "title": "Rinse the Nose",
-      "description": "Sniff water gently into the nostrils and then blow it out, three times."
+      "description": "Sniff water gently into the nostrils and then blow it out, three times.",
+      "fiqhType": "sunnah",
+      "note": "Sunnah Mu'akkadah in the Hanafi madhhab; some other scholars hold it to be Wajib."
     },
     {
       "id": "wash-face",
       "title": "Wash the Face",
-      "description": "Wash the whole face three times, from the hairline to the chin and from ear to ear."
+      "description": "Wash the whole face three times, from the hairline to the chin and from ear to ear.",
+      "fiqhType": "fard",
+      "note": null
     },
     {
       "id": "wash-right-arm",
       "title": "Wash the Right Arm",
-      "description": "Wash the right arm from the fingertips to (and including) the elbow, three times."
+      "description": "Wash the right arm from the fingertips to (and including) the elbow, three times.",
+      "fiqhType": "fard",
+      "note": null
     },
     {
       "id": "wash-left-arm",
       "title": "Wash the Left Arm",
-      "description": "Wash the left arm from the fingertips to (and including) the elbow, three times."
+      "description": "Wash the left arm from the fingertips to (and including) the elbow, three times.",
+      "fiqhType": "fard",
+      "note": null
     },
     {
       "id": "wipe-head",
       "title": "Wipe the Head",
-      "description": "With wet hands, wipe over the head once, moving from the front to the back and then back to the front."
+      "description": "With wet hands, wipe over the head once, moving from the front to the back and then back to the front.",
+      "fiqhType": "fard",
+      "note": "Wiping at least a quarter of the head fulfils the Fard; wiping the entire head, as described here, is the Sunnah method."
     },
     {
       "id": "wipe-ears",
       "title": "Wipe the Ears",
-      "description": "Wipe the inside of the ears with the index fingers and the outside with the thumbs, once."
+      "description": "Wipe the inside of the ears with the index fingers and the outside with the thumbs, once.",
+      "fiqhType": "sunnah",
+      "note": null
     },
     {
       "id": "wash-right-foot",
       "title": "Wash the Right Foot",
-      "description": "Wash the right foot up to (and including) the ankle, three times, including between the toes."
+      "description": "Wash the right foot up to (and including) the ankle, three times, including between the toes.",
+      "fiqhType": "fard",
+      "note": null
     },
     {
       "id": "wash-left-foot",
       "title": "Wash the Left Foot",
-      "description": "Wash the left foot up to (and including) the ankle, three times, including between the toes."
+      "description": "Wash the left foot up to (and including) the ankle, three times, including between the toes.",
+      "fiqhType": "fard",
+      "note": null
     },
     {
       "id": "after-wudu",
       "title": "Recite After Wudu",
       "description": "After completing wudu, it is Sunnah to bear witness to the oneness of Allah and ask to be among those who purify themselves.",
-      "arabicSource": { "type": "azkar", "category": "الذكر بعد الفراغ من الوضوء", "indexes": [0, 1] }
+      "fiqhType": "sunnah",
+      "note": "Narrated in Sahih Muslim, with the addition asking to be among those who purify themselves narrated in Jami' at-Tirmidhi.",
+      "arabicSource": {
+        "type": "literal",
+        "arabic": "أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّداً عَبْدُهُ وَرَسُولُهُ. اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ",
+        "transliteration": "Ash-hadu al la ilaha illallahu wahdahu la sharika lahu, wa ash-hadu anna Muhammadan 'abduhu wa rasuluh. Allahumma-j'alni minat-tawwabina wa-j'alni minal-mutatahhirin.",
+        "translation": "Main gawahi deta hoon keh Allah ke siwa koi ma'bood nahi, woh akela hai, uska koi shareek nahi, aur main gawahi deta hoon keh Muhammad (sallallahu alaihi wasallam) uske bande aur rasool hain. Ya Allah! Mujhe tauba karne walon mein shamil farma, aur mujhe pak-saaf rehne walon mein shamil farma."
+      }
     }
   ],
   "salahVariants": [
     {
       "id": "essentials",
       "label": "Salah Essentials",
-      "description": "The core sequence of a single unit (rakah) of prayer, from the opening takbir through the final tashahhud.",
+      "description": "The core sequence of a single unit (rakah) of prayer, from the opening takbir through the final tashahhud — plus the extra recitations belonging only to the closing rakah of a prayer.",
+      "preconditions": [
+        {
+          "id": "taharah",
+          "title": "Purification (Taharah)",
+          "detail": "Perform Wudu (or Ghusl, if required). Salah is not valid without it.",
+          "linkTo": "/wudu"
+        },
+        {
+          "id": "clean",
+          "title": "Clean Body, Clothes & Place",
+          "detail": "Your body, clothing, and the spot you pray on must be free of impurity (najasah).",
+          "linkTo": null
+        },
+        {
+          "id": "awrah",
+          "title": "Covering the Awrah",
+          "detail": "Men: navel to the knees, with the shoulders preferably covered too. Women: the entire body except the face and hands (some scholars also except the feet).",
+          "linkTo": null
+        },
+        {
+          "id": "qiblah",
+          "title": "Facing the Qiblah",
+          "detail": "Stand facing the direction of the Ka'bah in Makkah.",
+          "linkTo": "/qibla"
+        },
+        {
+          "id": "time",
+          "title": "Correct Time",
+          "detail": "Each prayer must be performed within its own prescribed window — not before it starts, and not after it ends.",
+          "linkTo": "/prayer-times"
+        }
+      ],
       "steps": [
         {
           "id": "salah-niyyah",
           "title": "Intention (Niyyah)",
-          "description": "Face the Qibla and form the intention in your heart for the specific prayer you are about to perform."
+          "description": "Face the Qibla and form the intention in your heart for the specific prayer you are about to perform. Speaking it aloud, as below, is an optional custom — the example here is for Fajr.",
+          "fiqhType": "shart",
+          "note": "Unlike Wudu, forming this intention is a Shart (necessary condition) for Salah in every madhhab — the prayer is invalid without it. Adapt the prayer name to whichever Salah you are performing.",
+          "arabicSource": { "type": "literal", "arabic": "نَوَيْتُ أَنْ أُصَلِّيَ لِلَّهِ تَعَالَى صَلَاةَ الْفَجْرِ مُسْتَقْبِلَ الْقِبْلَةِ", "transliteration": "Nawaitu an usalliya lillahi ta'ala salatal-fajri mustaqbilal-qiblah", "translation": "Maine Allah Ta'ala ke liye, qibla rukh ho kar, Fajr ki namaz padhne ki niyyat ki.", "translationLang": "ur" }
         },
         {
           "id": "takbiratul-ihram",
           "title": "Opening Takbir (Takbiratul Ihram)",
           "description": "Raise your hands and say the opening takbir, which begins the prayer.",
-          "arabicSource": { "type": "literal", "arabic": "اللَّهُ أَكْبَرُ", "transliteration": "Allahu Akbar", "translation": "Allah is the Greatest" }
+          "fiqhType": "fard",
+          "note": "Men typically raise their hands to ear level, women to shoulder level. Afterward, fold the hands below the navel or on the chest — practice varies by region within the Hanafi madhhab.",
+          "arabicSource": { "type": "literal", "arabic": "اللَّهُ أَكْبَرُ", "transliteration": "Allahu Akbar", "translation": "Allah sab se bada hai.", "translationLang": "ur" }
         },
         {
           "id": "istiftah",
-          "title": "Opening Supplication (Istiftah)",
+          "title": "Opening Supplication (Istiftah / Sana)",
           "description": "Standing (Qiyam), recite the opening supplication silently before beginning recitation.",
-          "arabicSource": { "type": "azkar", "category": "دعاء الاستفتاح", "indexes": [1] }
+          "fiqhType": "sunnah",
+          "note": null,
+          "arabicSource": { "type": "literal", "arabic": "سُبْحانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلاَ إِلَهَ غَيْرُكَ", "transliteration": "Subhanaka Allahumma wa bihamdika, wa tabarakasmuka, wa ta'ala jadduka, wa la ilaha ghairuk", "translation": "Aey Allah! Tu pak hai aur main teri hamd (tareef) ke saath tasbih karta hoon, tera naam babarkat hai, teri shaan buland hai, aur tere siwa koi ma'bood nahi.", "translationLang": "ur" }
+        },
+        {
+          "id": "taawwudh",
+          "title": "Seeking Refuge (Ta'awwudh)",
+          "description": "Before reciting Al-Fatihah in the first rakah, silently seek refuge in Allah from Shaytan.",
+          "fiqhType": "sunnah",
+          "note": "Recited silently, once, before Al-Fatihah in the first rakah only — not repeated in later rakahs.",
+          "arabicSource": { "type": "literal", "arabic": "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ", "transliteration": "A'udhu billahi minash-shaytanir-rajim", "translation": "Main dhutkare hue shaytan se Allah ki panah maangta hoon.", "translationLang": "ur" }
         },
         {
           "id": "al-fatihah",
           "title": "Recite Al-Fatihah",
           "description": "Recite Surah Al-Fatihah, which is required in every unit of prayer, followed (in most units) by another passage from the Qur'an.",
+          "fiqhType": "wajib",
+          "note": "Reciting some portion of the Qur'an in Qiyam is Fard; reciting Al-Fatihah specifically, as done here, is Wajib in the Hanafi madhhab. Shown in the verified Saheeh International English translation rather than a hand-written Urdu rendering, to protect the accuracy of this sacred text.",
           "arabicSource": { "type": "quran", "surah": 1, "ayah": 1, "ayahEnd": 7 }
+        },
+        {
+          "id": "short-surah",
+          "title": "Recite a Short Surah (e.g. Al-Ikhlas)",
+          "description": "Recite any surah or a few verses of the Qur'an after Al-Fatihah. Surah Al-Ikhlas is used here as a common example — any surah may be recited instead.",
+          "fiqhType": "wajib",
+          "note": "Wajib in the Hanafi madhhab in the first two rakahs of a Fard prayer, and in every rakah of Sunnah, Nafl, and Witr prayers. Shown in English for the same reason as Al-Fatihah above.",
+          "arabicSource": { "type": "quran", "surah": 112, "ayah": 1, "ayahEnd": 4 }
         },
         {
           "id": "ruku",
           "title": "Bowing (Ruku)",
           "description": "Bow with your back straight and hands resting on your knees, saying the glorification of your Lord three times.",
-          "arabicSource": { "type": "azkar", "category": "دعاء الركوع", "indexes": [0] }
+          "fiqhType": "fard",
+          "note": null,
+          "arabicSource": { "type": "literal", "arabic": "سُبْحانَ رَبِّيَ الْعَظِيمِ", "transliteration": "Subhana Rabbiyal Azeem", "translation": "Mera Rab, jo sab se azeem hai, har aib se pak hai.", "translationLang": "ur" }
         },
         {
           "id": "rising-from-ruku",
-          "title": "Rising from Ruku",
+          "title": "Rising from Ruku (Qawmah)",
           "description": "Stand up straight from the bow, saying the praise of Allah.",
-          "arabicSource": { "type": "azkar", "category": "دعاء الرفع من الركوع", "indexes": [0, 1] }
+          "fiqhType": "fard",
+          "note": "Standing straight here, before Sujood, is itself one of the Fard actions of the prayer — not just a brief pause.",
+          "arabicSource": { "type": "literal", "arabic": "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ، حَمْداً كَثيراً طَيِّباً مُبارَكاً فِيهِ", "transliteration": "Sami' Allahu liman hamidah. Rabbana wa lakal hamd, hamdan kathiran tayyiban mubarakan fih", "translation": "Allah ne us shakhs ki sun li jisne uski tareef ki. Aey hamare Rab! Sari tareef tere hi liye hai — bohat zyada, pakiza aur barkat wali tareef.", "translationLang": "ur" }
         },
         {
           "id": "sujood",
           "title": "Prostration (Sujood)",
           "description": "Prostrate with your forehead, nose, palms, knees, and toes touching the ground, saying the glorification of your Lord, the Most High, three times.",
-          "arabicSource": { "type": "azkar", "category": "دعاء السجود", "indexes": [0] }
+          "fiqhType": "fard",
+          "note": null,
+          "arabicSource": { "type": "literal", "arabic": "سُبْحَانَ رَبِّيَ الأَعْلَى", "transliteration": "Subhana Rabbiyal A'la", "translation": "Mera Rab, jo sab se buland hai, har aib se pak hai.", "translationLang": "ur" }
         },
         {
           "id": "jalsa",
           "title": "Sitting Between the Two Prostrations",
-          "description": "Sit up briefly between the two prostrations, asking for forgiveness, before prostrating a second time.",
-          "arabicSource": { "type": "azkar", "category": "دعاء الجلسة بين السجدتين", "indexes": [0] }
+          "description": "Sit up briefly between the two prostrations, asking for forgiveness, before prostrating a second time (same as the Sujood step above).",
+          "fiqhType": "fard",
+          "note": null,
+          "arabicSource": { "type": "literal", "arabic": "رَبِّ اغْفِرْ لِي، رَبِّ اغْفِرْ لِي", "transliteration": "Rabbighfir li, Rabbighfir li", "translation": "Aey mere Rab! Mujhe bakhsh de. Aey mere Rab! Mujhe bakhsh de.", "translationLang": "ur" }
         },
         {
           "id": "tashahhud",
           "title": "Tashahhud",
-          "description": "Sitting after two units (and again at the end of the prayer), recite the tashahhud, testifying to the oneness of Allah and the Prophethood of Muhammad ﷺ.",
-          "arabicSource": { "type": "azkar", "category": "التشهد", "indexes": [0] }
+          "description": "Sitting after two units — and again at the end of the prayer — recite the tashahhud, testifying to the oneness of Allah and the Prophethood of Muhammad ﷺ.",
+          "fiqhType": "wajib",
+          "note": "Sitting for at least this long in the final sitting is Fard; reciting the Tashahhud wording, in both sittings, is Wajib. In a prayer of more than 2 rakahs, stand up directly for the next rakah after the first Tashahhud — the Durood and closing dua below belong only to the final sitting.",
+          "arabicSource": { "type": "literal", "arabic": "التَّحِيَّاتُ لِلَّهِ، وَالصَّلَواتُ، وَالطَّيِّباتُ، السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّداً عَبْدُهُ وَرَسولُهُ", "transliteration": "At-tahiyyatu lillahi was-salawatu wat-tayyibat. As-salamu 'alayka ayyuhan-Nabiyyu wa rahmatullahi wa barakatuh. As-salamu 'alayna wa 'ala 'ibadillahis-saliheen. Ash-hadu al la ilaha illallah, wa ash-hadu anna Muhammadan 'abduhu wa rasuluh.", "translation": "Tamam zabani, badani aur maali ibadaten Allah hi ke liye hain. Aey Nabi! Aap par salamati ho, aur Allah ki rahmat aur uski barkaten ho. Hum par aur Allah ke naik bandon par bhi salamati ho. Main gawahi deta hoon keh Allah ke siwa koi ma'bood nahi, aur main gawahi deta hoon keh Muhammad (ﷺ) uske bande aur rasool hain.", "translationLang": "ur" }
         },
         {
           "id": "durood",
-          "title": "Salawat Upon the Prophet",
-          "description": "In the final tashahhud, send blessings upon the Prophet Muhammad ﷺ, as taught in the Sunnah.",
-          "arabicSource": { "type": "azkar", "category": "الصلاة على النبي بعد التشهد", "indexes": [0] }
+          "title": "Salawat Upon the Prophet (Durood-e-Ibrahim)",
+          "description": "In the final tashahhud only, send blessings upon the Prophet Muhammad ﷺ, as taught in the Sunnah.",
+          "fiqhType": "sunnah",
+          "note": "Recited only in the final sitting, after the Tashahhud.",
+          "arabicSource": { "type": "literal", "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ", "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala aali Muhammadin, kama sallayta 'ala Ibrahima wa 'ala aali Ibrahima, innaka Hamidum-Majeed. Allahumma barik 'ala Muhammadin wa 'ala aali Muhammadin, kama barakta 'ala Ibrahima wa 'ala aali Ibrahima, innaka Hamidum-Majeed.", "translation": "Aey Allah! Muhammad (ﷺ) aur unki aal par rahmat nazil farma, jaise tune Ibrahim (AS) aur unki aal par rahmat nazil farmayi — be-shak tu qabil-e-tareef aur bulandi wala hai. Aey Allah! Muhammad (ﷺ) aur unki aal par barkat nazil farma, jaise tune Ibrahim (AS) aur unki aal par barkat nazil farmayi — be-shak tu qabil-e-tareef aur bulandi wala hai.", "translationLang": "ur" }
+        },
+        {
+          "id": "final-dua",
+          "title": "Closing Dua — Seeking Refuge",
+          "description": "After the Durood, before Taslim, it is Sunnah to seek refuge in Allah from four trials.",
+          "fiqhType": "sunnah",
+          "note": "Narrated in Sahih Muslim (Prophet ﷺ taught this to be recited between the final Tashahhud/Durood and Taslim).",
+          "arabicSource": { "type": "literal", "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ، وَمِنْ عَذَابِ الْقَبْرِ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ", "transliteration": "Allahumma inni a'udhu bika min 'adhabi jahannam, wa min 'adhabil-qabr, wa min fitnatil-mahya wal-mamat, wa min sharri fitnatil-masihid-dajjal", "translation": "Aey Allah! Main jahannam ke azaab se, qabar ke azaab se, zindagi aur maut ke fitnon se, aur Dajjal ke fitne ki buraai se teri panah maangta hoon.", "translationLang": "ur" }
         },
         {
           "id": "taslim",
           "title": "Ending the Prayer (Taslim)",
           "description": "Turn your head to the right, then to the left, saying the closing greeting to end the prayer.",
-          "arabicSource": { "type": "literal", "arabic": "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ", "transliteration": "As-salamu 'alaykum wa rahmatullah", "translation": "Peace and the mercy of Allah be upon you" }
+          "fiqhType": "wajib",
+          "note": "Turning to the right and saying this once is Wajib; turning to the left and repeating it is Sunnah.",
+          "arabicSource": { "type": "literal", "arabic": "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ", "transliteration": "As-salamu 'alaykum wa rahmatullah", "translation": "Aap par Allah ka salam aur uski rahmat ho.", "translationLang": "ur" }
         }
       ]
     }

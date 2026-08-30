@@ -1,0 +1,236 @@
+{
+  "id": "umrah",
+  "label": "Umrah",
+  "description": "A step-by-step walkthrough of Umrah — from entering Ihram at the Miqat through Tawaf, Sa'ee, and Halq.",
+  "disclaimer": "This guide follows the Hanafi madhhab as commonly taught in the South Asian tradition. Details like Ihram clothing for women and some minor Sunnah practices vary by school of thought — follow your local teacher where this differs from what you were taught.",
+  "phases": [
+    {
+      "id": "at-the-miqat",
+      "title": "At the Miqat",
+      "subtitle": "Dhul-Hulayfah (Bir Ali), for those coming from Madina",
+      "steps": [
+        {
+          "id": "ghusl-ihram",
+          "order": 1,
+          "title": "Ghusl and Wear Ihram",
+          "description": "Perform Ghusl. Men wear two unstitched white sheets; women wear their normal modest clothing — there is no requirement for a special color, but the hands and face must stay uncovered (a loose cloth may be draped over the face without touching it for privacy from unrelated men, if needed).",
+          "note": null
+        },
+        {
+          "id": "ihram-nafl",
+          "order": 2,
+          "title": "Pray 2 Rak'at Ihram Nafl",
+          "description": "Pray two rak'at of Nafl with the intention of Ihram, ideally in Masjid ash-Shajarah at the Miqat.",
+          "note": null
+        },
+        {
+          "id": "niyyah-umrah",
+          "order": 3,
+          "title": "Make the Intention for Umrah",
+          "description": "After the prayer, form the intention for Umrah.",
+          "note": null,
+          "arabic": "اللَّهُمَّ إِنِّي أُرِيدُ الْعُمْرَةَ فَيَسِّرْهَا لِي وَتَقَبَّلْهَا مِنِّي",
+          "transliteration": "Allahumma inni uridul-'umrata fa yassirha li wa taqabbalha minni",
+          "translation": "Aey Allah! Main Umrah ka irada karta hoon, ise mere liye aasan farma aur ise mujh se qubool farma.",
+          "translationLang": "ur"
+        },
+        {
+          "id": "talbiyah",
+          "order": 4,
+          "title": "Recite the Talbiyah",
+          "description": "Begin reciting the Talbiyah immediately after your intention — aloud for men, softly for women — and repeat it often throughout the journey to Makkah.",
+          "note": null,
+          "arabic": "لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ",
+          "transliteration": "Labbaik Allahumma labbaik, labbaika la sharika laka labbaik, innal-hamda wan-ni'mata laka wal-mulk, la sharika lak",
+          "translation": "Main hazir hoon, Aey Allah, main hazir hoon. Main hazir hoon, tera koi shareek nahi, main hazir hoon. Be-shak sari tareef aur har ne'mat teri hai, aur badshahi bhi teri hai, tera koi shareek nahi.",
+          "translationLang": "ur"
+        },
+        {
+          "id": "ihram-restrictions",
+          "order": 5,
+          "title": "Know the Ihram Restrictions",
+          "description": "From this point until Umrah is complete: no perfume, no cutting hair or nails, no covering the head (men) or the face/hands with niqab or gloves (women), no stitched garment covering the body for men, no hunting, no marriage contracts, no marital relations, and no fighting, sinning, or arguing.",
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "entering-haram",
+      "title": "Entering Masjid al-Haram",
+      "subtitle": null,
+      "steps": [
+        {
+          "id": "enter-haram",
+          "order": 1,
+          "title": "Enter with Your Right Foot",
+          "description": "Step in right foot first, reciting the mosque-entry dua.",
+          "note": null,
+          "arabic": "بِسْمِ اللَّهِ وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ، اللَّهُمَّ اغْفِرْ لِي ذُنُوبِي وَافْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+          "transliteration": "Bismillahi was-salatu was-salamu 'ala Rasulillah, Allahummaghfir li dhunubi waftah li abwaba rahmatik",
+          "translation": "Allah ke naam se, aur durood-o-salam ho Allah ke Rasool par. Aey Allah! Mere gunah bakhsh de aur mere liye apni rahmat ke darwaze khol de.",
+          "translationLang": "ur"
+        },
+        {
+          "id": "first-sight-kaaba",
+          "order": 2,
+          "title": "First Sight of the Kaaba",
+          "description": "Keep your eyes lowered until the Kaaba comes into view. On first seeing it, say \"Allahu Akbar, La ilaha illallah\" and make dua freely — dua at this moment is widely held to be especially accepted.",
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "tawaf",
+      "title": "Tawaf (7 Circuits)",
+      "subtitle": null,
+      "steps": [
+        {
+          "id": "idtiba",
+          "order": 1,
+          "title": "Men: Uncover the Right Shoulder (Idtiba)",
+          "description": "Before starting, men drape the upper Ihram sheet under the right armpit and over the left shoulder, leaving the right shoulder bare for the whole Tawaf. Cover it again once Tawaf ends.",
+          "note": null
+        },
+        {
+          "id": "istilam",
+          "order": 2,
+          "title": "Start at the Black Stone (Hajr al-Aswad)",
+          "description": "Stand facing the Black Stone to begin. If you can reach it, touch or kiss it; if not, face it and gesture toward it with your right hand.",
+          "note": null,
+          "arabic": "بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ",
+          "transliteration": "Bismillahi wallahu akbar",
+          "translation": "Allah ke naam se, aur Allah sab se bada hai.",
+          "translationLang": "ur"
+        },
+        {
+          "id": "ramal",
+          "order": 3,
+          "title": "Men: Walk Briskly for the First 3 Circuits (Ramal)",
+          "description": "For the first three of the seven circuits only, men walk at a brisk, short-stepped pace close to the Kaaba, where crowding allows. The remaining four circuits are walked at a normal pace.",
+          "note": null
+        },
+        {
+          "id": "seven-circuits",
+          "order": 4,
+          "title": "Complete 7 Circuits",
+          "description": "Keep the Kaaba on your left and complete seven full circuits, ending back at the Black Stone each time. Use the time for dhikr, Qur'an, or dua in any language.",
+          "note": null
+        },
+        {
+          "id": "rukn-yamani",
+          "order": 5,
+          "title": "Rukn Yamani: Touch, Don't Kiss",
+          "description": "At the corner before the Black Stone (Rukn Yamani), touch it with your right hand if you can reach it. Unlike the Black Stone, don't kiss it — and if you can't reach it, simply continue on without gesturing toward it.",
+          "note": null
+        },
+        {
+          "id": "dua-rukn-hajar",
+          "order": 6,
+          "title": "Dua Between the Two Corners",
+          "description": "Recite this between Rukn Yamani and the Black Stone, on every circuit.",
+          "note": null,
+          "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+          "transliteration": "Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan wa qina 'adhaban-nar",
+          "translation": "Aey hamare Rab! Hamein duniya mein bhalai de aur akhirat mein bhi bhalai de, aur hamein aag ke azaab se bacha.",
+          "translationLang": "ur"
+        },
+        {
+          "id": "tawaf-nafl",
+          "order": 7,
+          "title": "Pray 2 Rak'at Wajib-ut-Tawaf",
+          "description": "After the 7th circuit, pray two rak'at behind Maqam Ibrahim if there's room, or anywhere else in the mosque if it's crowded.",
+          "note": null
+        },
+        {
+          "id": "zamzam",
+          "order": 8,
+          "title": "Drink Zamzam",
+          "description": "Drink Zamzam water to your fill — a Sunnah after Tawaf.",
+          "note": null
+        },
+        {
+          "id": "multazam",
+          "order": 9,
+          "title": "Dua at the Multazam",
+          "description": "If it's possible without crowding or harming others, stand at the Multazam — the wall between the Black Stone and the Kaaba's door — and make dua.",
+          "note": "Mustahab (recommended), not required — skip it without concern if the crowd makes it impractical."
+        }
+      ]
+    },
+    {
+      "id": "saee",
+      "title": "Sa'ee (7 Trips)",
+      "subtitle": "Between Safa and Marwa",
+      "steps": [
+        {
+          "id": "saee-start",
+          "order": 1,
+          "title": "Begin at Safa",
+          "description": "Heading to the Safa hill, recite the Qur'anic verse that opens the Sa'ee.",
+          "note": "The Prophet ﷺ would add, \"I begin with what Allah began with,\" before starting from Safa.",
+          "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ",
+          "transliteration": "Innas-safa wal-marwata min sha'a'irillah",
+          "translation": "Be-shak Safa aur Marwa Allah ki nishaniyon mein se hain.",
+          "translationLang": "ur"
+        },
+        {
+          "id": "safa-marwa-dua",
+          "order": 2,
+          "title": "Face the Kaaba and Recite This on Every Hill",
+          "description": "Standing atop Safa (and later Marwa), face the Kaaba, raise your hands, and say this three times, with Takbir before each, followed by your own personal dua.",
+          "note": null,
+          "arabic": "لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+          "transliteration": "La ilaha illallahu wahdahu la sharika lah, lahul mulku wa lahul hamd, wa huwa 'ala kulli shay'in qadeer",
+          "translation": "Allah ke siwa koi ma'bood nahi, woh akela hai, uska koi shareek nahi, badshahi usi ki hai aur tareef bhi usi ke liye hai, aur woh har cheez par qadir hai.",
+          "translationLang": "ur"
+        },
+        {
+          "id": "green-pillars",
+          "order": 3,
+          "title": "Men: Walk Briskly Between the Green Markers",
+          "description": "Between the green pillars/lights marking the low point of the valley, men walk at a brisk pace (women continue at their normal pace), reciting this dua.",
+          "note": null,
+          "arabic": "رَبِّ اغْفِرْ وَارْحَمْ، إِنَّكَ أَنْتَ الْأَعَزُّ الْأَكْرَمُ",
+          "transliteration": "Rabbighfir warham, innaka antal-a'azzul-akram",
+          "translation": "Aey mere Rab! Bakhsh de aur reham farma, be-shak tu sab se ghalib aur sab se karam wala hai.",
+          "translationLang": "ur"
+        },
+        {
+          "id": "seven-trips",
+          "order": 4,
+          "title": "Complete 7 Trips, Ending at Marwa",
+          "description": "Safa to Marwa counts as trip 1, Marwa to Safa as trip 2, and so on — seven trips in total, with the seventh ending at Marwa.",
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "completing-umrah",
+      "title": "Completing Umrah",
+      "subtitle": null,
+      "steps": [
+        {
+          "id": "halq-qasr",
+          "order": 1,
+          "title": "Shave or Trim the Hair (Halq/Qasr)",
+          "description": "Men shave the head (Halq — more virtuous) or trim it evenly all over (Qasr). Women cut a fingertip's length from the ends of their hair, not the whole length.",
+          "note": null
+        },
+        {
+          "id": "post-saee-nafl",
+          "order": 2,
+          "title": "Optional: 2 Rak'at Nafl",
+          "description": "Some pilgrims pray two rak'at of Nafl after Sa'ee out of general good practice.",
+          "note": "Not a widely-established requirement of Umrah — Halq/Qasr above is what actually completes it."
+        },
+        {
+          "id": "umrah-complete",
+          "order": 3,
+          "title": "Umrah Is Now Complete",
+          "description": "Once your hair is cut, every Ihram restriction is lifted. Umrah Mabroor — may Allah accept it.",
+          "note": null
+        }
+      ]
+    }
+  ]
+}

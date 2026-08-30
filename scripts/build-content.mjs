@@ -163,7 +163,12 @@ function cleanAzkarText(raw) {
 function resolveArabicSource(source) {
   if (!source) return null
   if (source.type === 'literal') {
-    return { arabic: source.arabic, transliteration: source.transliteration, translation: source.translation }
+    return {
+      arabic: source.arabic,
+      transliteration: source.transliteration,
+      translation: source.translation,
+      translationLang: source.translationLang ?? null,
+    }
   }
   if (source.type === 'quran') {
     const verses = versesBySurah.get(source.surah)
@@ -173,13 +178,16 @@ function resolveArabicSource(source) {
       arabic: range.map((v) => v.text).join(' '),
       transliteration: range.map((v) => v.transliteration).join(' '),
       translation: range.map((v) => v.translation).join(' '),
+      // Quran renderings are always the verified Saheeh International English
+      // translation — never hand-written Urdu — so this is never overridden.
+      translationLang: 'en',
     }
   }
   if (source.type === 'azkar') {
     const entries = AzkarCollection[source.category]
     if (!entries) throw new Error(`Unknown azkar category: ${source.category}`)
     const arabic = source.indexes.map((i) => cleanAzkarText(entries[i].zikr)).join(' ')
-    return { arabic, transliteration: null, translation: null }
+    return { arabic, transliteration: null, translation: null, translationLang: null }
   }
   throw new Error(`Unknown arabicSource type: ${source.type}`)
 }
@@ -195,6 +203,8 @@ const wuduSteps = wuduSalahSource.wudu.map((step, i) => ({
   order: i + 1,
   title: step.title,
   description: step.description,
+  fiqhType: step.fiqhType ?? null,
+  note: step.note ?? null,
   ...resolveArabicSource(step.arabicSource),
 }))
 const wuduJson = JSON.stringify(wuduSteps)
@@ -207,9 +217,17 @@ for (const variant of wuduSalahSource.salahVariants) {
     order: i + 1,
     title: step.title,
     description: step.description,
+    fiqhType: step.fiqhType ?? null,
+    note: step.note ?? null,
     ...resolveArabicSource(step.arabicSource),
   }))
-  const variantJson = JSON.stringify({ id: variant.id, label: variant.label, description: variant.description, steps })
+  const variantJson = JSON.stringify({
+    id: variant.id,
+    label: variant.label,
+    description: variant.description,
+    preconditions: variant.preconditions ?? [],
+    steps,
+  })
   writeFileSync(path.join(salahOutDir, `${variant.id}.json`), variantJson)
   hasher.update(variantJson)
 }

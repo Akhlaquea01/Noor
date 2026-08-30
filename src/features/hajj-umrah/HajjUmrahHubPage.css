@@ -1,0 +1,74 @@
+.hajj-umrah-hub-page {
+  padding: var(--space-5);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hajj-umrah-hub-page h1 {
+  margin: 0 0 var(--space-2);
+}
+
+.hajj-umrah-hub-page__note {
+  margin: 0 0 var(--space-5);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.hajj-umrah-hub-page__list {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.hajj-umrah-hub-page__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.hajj-umrah-hub-page__icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: rgba(184, 230, 138, 0.1);
+  color: var(--color-primary);
+  border-radius: var(--radius-md);
+}
+
+.hajj-umrah-hub-page__row strong {
+  display: block;
+  font-size: 0.98rem;
+}
+
+.hajj-umrah-hub-page__row p {
+  margin: 2px 0 0;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.hajj-umrah-hub-page__arrow {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+}
+
+.hajj-umrah-hub-page__disclaimer {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  border-top: 1px solid var(--glass-border);
+  padding-top: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .hajj-umrah-hub-page {
+    padding: var(--space-7) 0;
+    max-width: 720px;
+  }
+}

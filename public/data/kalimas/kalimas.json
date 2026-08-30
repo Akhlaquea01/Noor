@@ -1,0 +1,74 @@
+{
+  "id": "six-kalimas",
+  "label": "The 6 Kalimas",
+  "description": "A Kalima is a short statement of Islamic belief. The set of six below is a memorization curriculum widely taught in mosques and madrasahs across the Indian subcontinent (Pakistan, India, Bangladesh) — not a formally fixed list agreed on everywhere in the Muslim world.",
+  "disclaimer": "Wording, numbering, and even the count (some regions teach 5, not 6) vary between local traditions. The versions here follow the commonly printed South Asian textbook wording. Where this differs from what you were taught, both are valid — follow your local teacher.",
+  "kalimas": [
+    {
+      "id": "tayyabah",
+      "order": 1,
+      "title": "Kalima Tayyabah — The Good Word",
+      "description": "The first Kalima and the foundation of Islamic belief: the declaration that there is no god but Allah, and Muhammad ﷺ is His Messenger. This exact phrase is also recited within Salah's Tashahhud.",
+      "note": null,
+      "arabic": "لَا إِلَٰهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ",
+      "transliteration": "La ilaha illallahu Muhammadur Rasulullah",
+      "translation": "Allah ke siwa koi ma'bood nahi, Muhammad (ﷺ) Allah ke rasool hain.",
+      "translationLang": "ur"
+    },
+    {
+      "id": "shahadat",
+      "order": 2,
+      "title": "Kalima Shahadat — The Testimony",
+      "description": "The formal testimony of faith — the words a person recites to enter Islam, and the same testimony repeated within Salah's Tashahhud.",
+      "note": null,
+      "arabic": "أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "transliteration": "Ash-hadu alla ilaha illallahu wahdahu la sharika lahu, wa ash-hadu anna Muhammadan 'abduhu wa rasuluh",
+      "translation": "Main gawahi deta hoon keh Allah ke siwa koi ma'bood nahi, woh akela hai, uska koi shareek nahi, aur main gawahi deta hoon keh Muhammad (ﷺ) uske bande aur rasool hain.",
+      "translationLang": "ur"
+    },
+    {
+      "id": "tamjeed",
+      "order": 3,
+      "title": "Kalima Tamjeed — Glorification",
+      "description": "A short glorification of Allah, combining Tasbih (Subhanallah), Tahmid (Alhamdulillah), Tahlil (La ilaha illallah), and Takbir (Allahu Akbar) into a single statement.",
+      "note": null,
+      "arabic": "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ",
+      "transliteration": "Subhanallahi walhamdulillahi wa la ilaha illallahu wallahu akbar, wa la hawla wa la quwwata illa billahil 'Aliyyil 'Azeem",
+      "translation": "Allah pak hai, aur sari tareef Allah hi ke liye hai, aur Allah ke siwa koi ma'bood nahi, aur Allah sab se bada hai, aur buland-o-bartar Allah ke siwa koi taqat aur qoowat nahi.",
+      "translationLang": "ur"
+    },
+    {
+      "id": "tauheed",
+      "order": 4,
+      "title": "Kalima Tauheed — Oneness of Allah",
+      "description": "A fuller declaration of Allah's oneness, His sovereignty over all creation, and His power over all things.",
+      "note": null,
+      "arabic": "لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِـي وَيُمِيتُ وَهُوَ حَيٌّ لَا يَمُوتُ أَبَدًا أَبَدًا، ذُو الْجَلَالِ وَالْإِكْرَامِ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+      "transliteration": "La ilaha illallahu wahdahu la sharika lah, lahul mulku wa lahul hamd, yuhyi wa yumeetu wa huwa hayyun la yamootu abadan abada, dhul jalali wal ikram, biyadihil khair, wa huwa 'ala kulli shay'in qadeer",
+      "translation": "Allah ke siwa koi ma'bood nahi, woh akela hai, uska koi shareek nahi. Badshahi usi ki hai aur tareef bhi usi ke liye hai. Wohi zindagi deta hai aur maut deta hai, aur woh hamesha zinda hai, kabhi nahi marega. Jalal aur ikram wala hai, uske hath mein bhalai hai, aur woh har cheez par qadir hai.",
+      "translationLang": "ur"
+    },
+    {
+      "id": "astaghfar",
+      "order": 5,
+      "title": "Kalima Astaghfar — Seeking Forgiveness",
+      "description": "A comprehensive prayer for forgiveness, covering sins committed knowingly and unknowingly, openly and secretly.",
+      "note": null,
+      "arabic": "أَسْتَغْفِرُ اللَّهَ رَبِّي مِنْ كُلِّ ذَنْبٍ أَذْنَبْتُهُ عَمْدًا أَوْ خَطَأً سِرًّا أَوْ عَلَانِيَةً وَأَتُوبُ إِلَيْهِ مِنَ الذَّنْبِ الَّذِي أَعْلَمُ وَمِنَ الذَّنْبِ الَّذِي لَا أَعْلَمُ إِنَّكَ أَنْتَ عَلَّامُ الْغُيُوبِ وَسَتَّارُ الْعُيُوبِ وَغَفَّارُ الذُّنُوبِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ",
+      "transliteration": "Astaghfirullaha rabbi min kulli dhanbin adhnabtuhu 'amdan aw khata'an sirran aw 'alaniyah, wa atubu ilayhi minadh-dhanbil-ladhi a'lamu wa minadh-dhanbil-ladhi la a'lam, innaka anta 'allamul ghuyubi wa sattarul 'uyubi wa ghaffarudh-dhunubi, wa la hawla wa la quwwata illa billahil 'Aliyyil 'Azeem",
+      "translation": "Main apne Rab Allah se har us gunah ki maafi maangta hoon jo maine jaan-boojh kar ya anjane mein, chhup kar ya khule aam kiya. Aur main us gunah se bhi tauba karta hoon jo mujhe maloom hai aur us se bhi jo mujhe maloom nahi. Be-shak tu ghaib ki baaton ko khoob jaanne wala, aibon ko chhupane wala, aur gunahon ko bakhshne wala hai. Buland-o-bartar Allah ke siwa koi taqat aur qoowat nahi.",
+      "translationLang": "ur"
+    },
+    {
+      "id": "radd-e-kufr",
+      "order": 6,
+      "title": "Kalima Radd-e-Kufr — Rejection of Disbelief",
+      "description": "A renunciation of disbelief, polytheism, and major sins, paired with a renewed declaration of faith.",
+      "note": "Some regional print sources end this Kalima with \"wa u'minu bika\" (\"and I believe in You\") instead of \"wa uslimu\" (\"and I submit\") used here — both circulate; the meaning is not materially different.",
+      "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ أَنْ أُشْرِكَ بِكَ شَيْئًا وَأَنَا أَعْلَمُ بِهِ وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ بِهِ تُبْتُ عَنْهُ وَتَبَرَّأْتُ مِنَ الْكُفْرِ وَالشِّرْكِ وَالْكِذْبِ وَالْغِيبَةِ وَالْبِدْعَةِ وَالنَّمِيمَةِ وَالْفَوَاحِشِ وَالْبُهْتَانِ وَالْمَعَاصِي كُلِّهَا وَأُسْلِمُ وَأَقُولُ لَا إِلَٰهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ",
+      "transliteration": "Allahumma inni a'udhu bika min an ushrika bika shay'an wa ana a'lamu bih, wa astaghfiruka lima la a'lamu bih. Tubtu 'anhu wa tabarra'tu minal kufri wash-shirki wal-kadhibi wal-ghibati wal-bid'ati wan-namimati wal-fawahishi wal-buhtani wal-ma'asi kulliha, wa uslimu wa aqulu la ilaha illallahu Muhammadur Rasulullah",
+      "translation": "Aey Allah! Main is baat se teri panah maangta hoon keh maine jaante hue tera koi shareek thehraya ho, aur jo mujhe maloom nahi us par bhi teri maafi maangta hoon. Main us se tauba karta hoon aur kufr, shirk, jhoot, gheebat, bid'at, chugli, be-hayai, buhtan aur tamam gunahon se bezaar hota hoon, aur main Islam qubool karta hoon aur kehta hoon: Allah ke siwa koi ma'bood nahi, Muhammad (ﷺ) Allah ke rasool hain.",
+      "translationLang": "ur"
+    }
+  ]
+}

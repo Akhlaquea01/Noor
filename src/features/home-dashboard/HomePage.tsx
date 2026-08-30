@@ -15,6 +15,9 @@ import {
   Newspaper,
   ChevronRight,
   BookMarked,
+  ListOrdered,
+  ScrollText,
+  Mountain,
 } from 'lucide-react'
 import { GlassCard } from '../../shared/ui/GlassCard'
 import { usePreferencesStore } from '../../shared/state/preferencesStore'
@@ -60,6 +63,9 @@ async function findMostRecentArticle(): Promise<RecentArticle | null> {
 const QUICK_ACTIONS = [
   { to: '/wudu', label: 'Wudu', detail: 'Purify before prayer', Icon: Droplets },
   { to: '/salah', label: 'Salah', detail: 'Learn the prayer', Icon: PersonStanding },
+  { to: '/rakat-guide', label: "Rak'ahs Guide", detail: 'Sequence & timing', Icon: ListOrdered },
+  { to: '/kalimas', label: 'The 6 Kalimas', detail: 'Learn & memorize', Icon: ScrollText },
+  { to: '/hajj-umrah', label: 'Hajj & Umrah', detail: 'Interactive step-by-step guide', Icon: Mountain },
   { to: '/quran', label: 'Quran', detail: 'Read & reflect', Icon: BookOpen },
   { to: '/duas', label: 'Duas', detail: 'Daily collection', Icon: HandHeart },
   { to: '/tasbih', label: 'Tasbih', detail: 'Keep count', Icon: CircleDot },

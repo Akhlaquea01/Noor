@@ -9,6 +9,10 @@ import { DuaCategoriesPage } from '../features/duas/DuaCategoriesPage'
 import { DuaListPage } from '../features/duas/DuaListPage'
 import { WuduPage } from '../features/wudu/WuduPage'
 import { SalahPage } from '../features/salah/SalahPage'
+import { RakatGuidePage } from '../features/rakat-guide/RakatGuidePage'
+import { KalimasPage } from '../features/kalimas/KalimasPage'
+import { HajjUmrahHubPage } from '../features/hajj-umrah/HajjUmrahHubPage'
+import { PilgrimageGuidePage } from '../features/hajj-umrah/PilgrimageGuidePage'
 import { PrayerTimesPage } from '../features/prayer-times/PrayerTimesPage'
 import { QiblaPage } from '../features/qibla/QiblaPage'
 import { TasbihPage } from '../features/tasbih/TasbihPage'
@@ -39,6 +43,10 @@ export const router = createHashRouter([
       { path: '/duas/:categoryId', element: <DuaListPage /> },
       { path: '/wudu', element: <WuduPage /> },
       { path: '/salah', element: <SalahPage /> },
+      { path: '/rakat-guide', element: <RakatGuidePage /> },
+      { path: '/kalimas', element: <KalimasPage /> },
+      { path: '/hajj-umrah', element: <HajjUmrahHubPage /> },
+      { path: '/hajj-umrah/:guideId', element: <PilgrimageGuidePage /> },
       { path: '/prayer-times', element: <PrayerTimesPage /> },
       { path: '/qibla', element: <QiblaPage /> },
       { path: '/tasbih', element: <TasbihPage /> },

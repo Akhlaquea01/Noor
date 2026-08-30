@@ -1,0 +1,216 @@
+{
+  "id": "hajj",
+  "label": "Hajj",
+  "description": "A day-by-day walkthrough of the 5 days of Hajj, from the 8th to the 12th of Dhul-Hijjah — from the journey to Mina through the final Rami and departure.",
+  "disclaimer": "This guide follows the Hanafi madhhab and describes Hajj Tamattu' (the most common type, combining Umrah and Hajj on one trip). Specific obligations — especially around Qurbani and repeating Sa'ee — differ for Hajj Qiran and Hajj Ifrad. Always follow the instructions of your Hajj group's Moallim (guide) or scholar for anything specific to your group's arrangements.",
+  "phases": [
+    {
+      "id": "day1",
+      "title": "Day 1 — 8 Dhul-Hijjah (Yawm at-Tarwiyah)",
+      "subtitle": "Departure to Mina",
+      "steps": [
+        {
+          "id": "ihram-hajj",
+          "order": 1,
+          "title": "Enter Ihram for Hajj",
+          "description": "Perform Ghusl, wear Ihram, pray 2 rak'at Nafl, then make the intention and recite the Talbiyah for Hajj.",
+          "note": "If performing Hajj Tamattu', this Ihram is entered fresh — usually from your place of stay in Makkah — after having already completed Umrah earlier in the trip.",
+          "arabic": "اللَّهُمَّ إِنِّي أُرِيدُ الْحَجَّ فَيَسِّرْهُ لِي وَتَقَبَّلْهُ مِنِّي",
+          "transliteration": "Allahumma inni uridul-hajja fa yassirhu li wa taqabbalhu minni",
+          "translation": "Aey Allah! Main Hajj ka irada karta hoon, ise mere liye aasan farma aur ise mujh se qubool farma.",
+          "translationLang": "ur"
+        },
+        {
+          "id": "travel-mina",
+          "order": 2,
+          "title": "Travel to Mina",
+          "description": "Head to Mina, reciting the Talbiyah along the way. Note your tent number and the route back to it.",
+          "note": null
+        },
+        {
+          "id": "mina-five-prayers",
+          "order": 3,
+          "title": "Pray Five Prayers in Mina",
+          "description": "Pray Zuhr, Asr, Maghrib, Isha, and the following Fajr in Mina.",
+          "note": "Zuhr, Asr, and Isha are shortened (Qasr) to 2 rak'at each — but each is prayed at its own separate time, not combined with another."
+        },
+        {
+          "id": "dhikr-day1",
+          "order": 4,
+          "title": "Spend the Day in Talbiyah and Dhikr",
+          "description": "Fill the rest of the day with Talbiyah, dhikr, and Qur'an while you wait in Mina.",
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "day2-arafat",
+      "title": "Day 2 — 9 Dhul-Hijjah (Yawm Arafah)",
+      "subtitle": "Hajj's greatest pillar",
+      "steps": [
+        {
+          "id": "travel-arafat",
+          "order": 1,
+          "title": "Travel to Arafat After Fajr",
+          "description": "Leave Mina for Arafat after Fajr prayer and breakfast, with your Moallim (guide).",
+          "note": null
+        },
+        {
+          "id": "ghusl-arafat",
+          "order": 2,
+          "title": "Ghusl Before Zuhr",
+          "description": "Perform Ghusl before Zuhr's time begins — a Sunnah for the Day of Arafah.",
+          "note": null
+        },
+        {
+          "id": "zuhr-asr-combined",
+          "order": 3,
+          "title": "Pray Zuhr and Asr Combined",
+          "description": "Pray Zuhr and Asr together at Zuhr's time (Jam' Taqdim), each shortened to 2 rak'at, with one Adhan and two Iqamahs — normally led by your group's Imam.",
+          "note": null
+        },
+        {
+          "id": "wuquf-arafat",
+          "order": 4,
+          "title": "Stand in Dua Until Sunset (Wuquf)",
+          "description": "This standing and supplication — anywhere within the plain of Arafat, standing or sitting — is Hajj's single greatest pillar. The Prophet ﷺ said, \"Hajj is Arafah.\" Spend the time until sunset in dua, dhikr, and Astaghfar.",
+          "note": "Narrated in Tirmidhi as the best supplication of this day, also said by earlier Prophets before Muhammad ﷺ.",
+          "arabic": "لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+          "transliteration": "La ilaha illallahu wahdahu la sharika lah, lahul mulku wa lahul hamd, wa huwa 'ala kulli shay'in qadeer",
+          "translation": "Allah ke siwa koi ma'bood nahi, woh akela hai, uska koi shareek nahi, badshahi usi ki hai aur tareef bhi usi ke liye hai, aur woh har cheez par qadir hai.",
+          "translationLang": "ur"
+        },
+        {
+          "id": "depart-muzdalifah",
+          "order": 5,
+          "title": "Depart for Muzdalifah After Sunset",
+          "description": "Leave only once the sun has fully set — without praying Maghrib at Arafat; it's prayed later, at Muzdalifah.",
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "night-muzdalifah",
+      "title": "Night of 9 Dhul-Hijjah — Muzdalifah",
+      "subtitle": null,
+      "steps": [
+        {
+          "id": "muzdalifah-prayer",
+          "order": 1,
+          "title": "Pray Maghrib and Isha Combined",
+          "description": "At Muzdalifah, combine Maghrib and Isha at Isha's time (Jam' Ta'khir) — one Adhan, two Iqamahs. Pray Witr afterward, as usual.",
+          "note": null
+        },
+        {
+          "id": "muzdalifah-stay",
+          "order": 2,
+          "title": "Spend the Night in Muzdalifah",
+          "description": "Staying here is Wajib, at minimum until after midnight. Staying until Fajr, resting under the open sky as the Prophet ﷺ did, is Sunnah.",
+          "note": null
+        },
+        {
+          "id": "collect-pebbles",
+          "order": 3,
+          "title": "Collect Pebbles for Rami",
+          "description": "Gather roughly 70 pebbles, about chickpea-sized, for the days ahead.",
+          "note": "They can be collected here, at Mina, or wherever's convenient — many Hajj groups now provide them ready-made."
+        },
+        {
+          "id": "fajr-muzdalifah",
+          "order": 4,
+          "title": "Pray Fajr Early, Then Head to Mina",
+          "description": "Praying Fajr at its earliest possible time here is a special Sunnah of this day. Afterward, proceed to Mina before sunrise.",
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "day3-eid",
+      "title": "Day 3 — 10 Dhul-Hijjah (Yawm an-Nahr)",
+      "subtitle": "Eid al-Adha — Rami, Qurbani, Halq, Tawaf",
+      "steps": [
+        {
+          "id": "rami-aqabah",
+          "order": 1,
+          "title": "Throw 7 Pebbles at Jamarat al-Aqabah",
+          "description": "Throw only the large Jamarah (Al-Aqabah) today — 7 pebbles, one at a time, saying Allahu Akbar with each throw.",
+          "note": "Saying just \"Allahu Akbar\" with each pebble is what's authentically established; longer phrases sometimes added in popular guides aren't obligatory.",
+          "arabic": "اللَّهُ أَكْبَرُ",
+          "transliteration": "Allahu Akbar",
+          "translation": "Allah sab se bada hai.",
+          "translationLang": "ur"
+        },
+        {
+          "id": "qurbani",
+          "order": 2,
+          "title": "Offer the Sacrifice (Qurbani)",
+          "description": "Wajib for pilgrims performing Hajj Tamattu' or Qiran (most pilgrims) — usually arranged in advance through an authorized service, so it's performed correctly and on time.",
+          "note": null
+        },
+        {
+          "id": "halq-qasr-hajj",
+          "order": 3,
+          "title": "Shave or Trim the Hair (Halq/Qasr)",
+          "description": "Men shave the head (Halq — more virtuous) or trim it evenly (Qasr); women cut a fingertip's length from the ends of their hair.",
+          "note": "This completes the first Tahallul (partial release from Ihram) — everything becomes permitted again except marital relations, which stay off-limits until Tawaf al-Ifadah below. The order Rami → Qurbani → Halq is Sunnah to follow; doing them out of order due to crowding doesn't invalidate Hajj."
+        },
+        {
+          "id": "tawaf-ifadah",
+          "order": 4,
+          "title": "Tawaf al-Ifadah (Ziyarah) and Sa'ee",
+          "description": "Go to Makkah for the Tawaf that is Hajj's own obligatory pillar, performed the same way as Umrah's Tawaf. If performing Tamattu', also do Sa'ee here since it wasn't carried over from Umrah; if Qiran or Ifrad and Sa'ee was already done earlier, it isn't repeated.",
+          "note": "This Tawaf completes the second Tahallul — every remaining Ihram restriction is now lifted."
+        },
+        {
+          "id": "return-mina-day3",
+          "order": 5,
+          "title": "Return to Your Tent in Mina",
+          "description": "Head back to Mina once you're done in Makkah.",
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "day4",
+      "title": "Day 4 — 11 Dhul-Hijjah",
+      "subtitle": "Rami of all three Jamarat",
+      "steps": [
+        {
+          "id": "rami-day4",
+          "order": 1,
+          "title": "Throw 7 Pebbles at Each of the Three Jamarat",
+          "description": "After Zuhr's time begins, throw 7 pebbles at each in order: first the Small (As-Sughra), then the Medium (Al-Wusta), then the Large (Al-Aqabah).",
+          "note": "Pause for dua after the Small and Medium Jamarat; the Large one isn't followed by a lengthy dua."
+        },
+        {
+          "id": "stay-mina-night4",
+          "order": 2,
+          "title": "Stay Overnight in Mina",
+          "description": "Spending the nights of Mina during these days is Wajib.",
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "day5",
+      "title": "Day 5 — 12 Dhul-Hijjah",
+      "subtitle": "Final Rami and departure (Nafr Awwal)",
+      "steps": [
+        {
+          "id": "rami-day5",
+          "order": 1,
+          "title": "Throw 7 Pebbles at Each of the Three Jamarat Again",
+          "description": "Same order as the day before: Small, then Medium, then Large — after Zuhr's time begins.",
+          "note": null
+        },
+        {
+          "id": "depart-mina",
+          "order": 2,
+          "title": "Leave Mina Before Sunset, or Stay a Third Night",
+          "description": "If leaving on the 12th (Nafr Awwal), you must exit Mina's boundary before sunset.",
+          "note": "If sunset arrives while you're still there, you're obligated to stay a third night and repeat the Rami on the 13th (Nafr Thani) before leaving."
+        }
+      ]
+    }
+  ]
+}

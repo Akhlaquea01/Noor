@@ -1,0 +1,147 @@
+{
+  "dailyPrayers": [
+    {
+      "id": "fajr",
+      "name": "Fajr",
+      "arabicName": "الفجر",
+      "timing": "From true dawn (subh sadiq) until just before sunrise",
+      "sequence": [
+        { "type": "sunnah-muakkadah", "label": "Sunnah (Mu'akkadah)", "rakat": 2 },
+        { "type": "fard", "label": "Fard", "rakat": 2 }
+      ],
+      "totalRakat": 4,
+      "note": "The 2-rakat Sunnah before Fajr is one of the most emphasised in the Sunnah — reported as \"better than the world and everything in it\" (Sahih Muslim)."
+    },
+    {
+      "id": "dhuhr",
+      "name": "Dhuhr",
+      "arabicName": "الظهر",
+      "timing": "After the sun passes its zenith, until Asr begins",
+      "sequence": [
+        { "type": "sunnah-muakkadah", "label": "Sunnah (Mu'akkadah)", "rakat": 4 },
+        { "type": "fard", "label": "Fard", "rakat": 4 },
+        { "type": "sunnah-muakkadah", "label": "Sunnah (Mu'akkadah)", "rakat": 2 },
+        { "type": "nafl", "label": "Nafl", "rakat": 2 }
+      ],
+      "totalRakat": 12,
+      "note": "In a 4-rakat Sunnah/Nafl prayer, a surah is recited after Al-Fatihah in all 4 rakat; in a 4-rakat Fard, a surah is added only in the first 2."
+    },
+    {
+      "id": "asr",
+      "name": "Asr",
+      "arabicName": "العصر",
+      "timing": "From when an object's shadow equals its length, until sunset",
+      "sequence": [
+        { "type": "sunnah-ghair-muakkadah", "label": "Sunnah (Ghair Mu'akkadah)", "rakat": 4 },
+        { "type": "fard", "label": "Fard", "rakat": 4 }
+      ],
+      "totalRakat": 8,
+      "note": "The 4-rakat Sunnah before Asr is Ghair Mu'akkadah — strongly encouraged, with great reward, but not sinful to miss."
+    },
+    {
+      "id": "maghrib",
+      "name": "Maghrib",
+      "arabicName": "المغرب",
+      "timing": "Immediately after sunset — prayed promptly, without delay",
+      "sequence": [
+        { "type": "fard", "label": "Fard", "rakat": 3 },
+        { "type": "sunnah-muakkadah", "label": "Sunnah (Mu'akkadah)", "rakat": 2 },
+        { "type": "nafl", "label": "Nafl", "rakat": 2 }
+      ],
+      "totalRakat": 7,
+      "note": null
+    },
+    {
+      "id": "isha",
+      "name": "Isha",
+      "arabicName": "العشاء",
+      "timing": "From the disappearance of twilight until dawn — best prayed before midnight",
+      "sequence": [
+        { "type": "sunnah-ghair-muakkadah", "label": "Sunnah (Ghair Mu'akkadah)", "rakat": 4 },
+        { "type": "fard", "label": "Fard", "rakat": 4 },
+        { "type": "sunnah-muakkadah", "label": "Sunnah (Mu'akkadah)", "rakat": 2 },
+        { "type": "nafl", "label": "Nafl", "rakat": 2 },
+        { "type": "wajib", "label": "Witr (Wajib)", "rakat": 3 },
+        { "type": "nafl", "label": "Nafl", "rakat": 2 }
+      ],
+      "totalRakat": 17,
+      "note": "Witr is Wajib in the Hanafi madhhab. If it wasn't prayed after Isha, it can still be prayed later that night — including after Tahajjud."
+    }
+  ],
+  "totalDailyRakat": 48,
+  "jumuah": {
+    "description": "On Fridays, Jumu'ah replaces the Dhuhr Fard and is prayed in congregation at the masjid, preceded by a khutbah (sermon). It is not a substitute for individual Dhuhr if congregational Jumu'ah is missed — the Dhuhr must be prayed instead.",
+    "steps": [
+      { "order": 1, "label": "Sunnah (Mu'akkadah)", "type": "sunnah-muakkadah", "rakat": 4, "method": "Prayed individually before the khutbah begins" },
+      { "order": 2, "label": "Fard", "type": "fard", "rakat": 2, "method": "Led by the Imam, immediately after the khutbah — the obligatory congregational prayer" },
+      { "order": 3, "label": "Sunnah (Mu'akkadah)", "type": "sunnah-muakkadah", "rakat": 4, "method": "Prayed individually after the Fard" },
+      { "order": 4, "label": "Sunnah (Mu'akkadah)", "type": "sunnah-muakkadah", "rakat": 2, "method": "A second, shorter Sunnah set prayed after the first" },
+      { "order": 5, "label": "Nafl", "type": "nafl", "rakat": 2, "method": "Voluntary, prayed individually" }
+    ],
+    "totalRakat": 14,
+    "note": "The two Sunnah sets after the Fard (6 rakat total) reflect common Hanafi practice in the South Asian tradition. Some scholars hold that only 4 Sunnah are prescribed after Jumu'ah. Where practices differ, follow your local Imam or a qualified teacher."
+  },
+  "nawafil": [
+    {
+      "id": "tahajjud",
+      "name": "Tahajjud",
+      "timing": "Last third of the night, after waking from sleep",
+      "rakat": "2–12, in pairs",
+      "virtue": "One of the most emphasised voluntary prayers (Qur'an 17:79) — 8 rak'ahs is most commonly reported from the Prophet ﷺ. If Witr wasn't prayed after Isha, it is prayed at the end of Tahajjud instead."
+    },
+    {
+      "id": "ishraq",
+      "name": "Ishraq",
+      "timing": "15–20 minutes after sunrise, once the sun has fully risen",
+      "rakat": "2 or 4",
+      "virtue": "The reward of a complete Hajj and Umrah for one who prays Fajr in congregation, sits remembering Allah until sunrise, then prays it (Tirmidhi, hasan)."
+    },
+    {
+      "id": "chasht",
+      "name": "Chasht (Duha)",
+      "timing": "Mid-morning, from shortly after sunrise until just before Dhuhr",
+      "rakat": "2, 4, or 8",
+      "virtue": "Fulfils the sadaqah due each day on every one of the body's joints (Sahih Muslim)."
+    },
+    {
+      "id": "awwabin",
+      "name": "Awwabin",
+      "timing": "After the Maghrib Sunnah and Nafl",
+      "rakat": "6, in pairs",
+      "virtue": "A mustahab practice for the \"often-returning\" worshipper. The hadith specifying its reward is graded weak by some scholars, but it remains a widely observed Sunnah practice."
+    }
+  ],
+  "specialOccasions": [
+    {
+      "id": "eid",
+      "name": "Eid-ul-Fitr / Eid-ul-Adha",
+      "detail": "2 rakat — Wajib in the Hanafi madhhab (Sunnah Mu'akkadah in others) — with 6 additional Takbirs: 3 before the recitation in the first rakah, 3 before Ruku in the second. Prayed in congregation with no adhan or iqamah."
+    },
+    {
+      "id": "janazah",
+      "name": "Janazah (Funeral Prayer)",
+      "detail": "Fard Kifayah — obligatory on the community, not every individual, so it is fulfilled once enough people perform it. 4 Takbirs said standing, with no Ruku or Sujood."
+    },
+    {
+      "id": "taraweeh",
+      "name": "Taraweeh",
+      "detail": "20 rakat, Sunnah Mu'akkadah 'alal-Kifayah, prayed in pairs on the nights of Ramadan, usually followed by Witr in congregation. Other schools and scholars differ — commonly 8 or 36 rakat."
+    }
+  ],
+  "definitions": [
+    { "term": "Fard", "meaning": "Compulsory, established by definitive proof. Leaving it without excuse is a major sin." },
+    { "term": "Wajib", "meaning": "Obligatory, established by strong (but not definitive) proof — such as Witr. Must be performed; missing it habitually without excuse is sinful." },
+    { "term": "Sunnah Mu'akkadah", "meaning": "Emphasised Sunnah the Prophet ﷺ performed consistently and rarely left. Should not be habitually missed." },
+    { "term": "Sunnah Ghair Mu'akkadah", "meaning": "Optional Sunnah the Prophet ﷺ performed often but not always. Great reward for praying it, no sin for missing it." },
+    { "term": "Nafl", "meaning": "Purely voluntary prayer offered for extra reward, beyond what is required." }
+  ],
+  "adhkar": [
+    { "label": "Astaghfirullah (I seek Allah's forgiveness)", "count": "3 times" },
+    { "label": "Ayatul Kursi (Qur'an 2:255)", "count": "Once" },
+    { "label": "SubhanAllah (Glory be to Allah)", "count": "33 times" },
+    { "label": "Alhamdulillah (All praise is for Allah)", "count": "33 times" },
+    { "label": "Allahu Akbar (Allah is the Greatest)", "count": "34 times" },
+    { "label": "Personal Dua — made after the Fard or the final Sunnah/Nafl", "count": null }
+  ],
+  "disclaimer": "This guide reflects the Hanafi madhhab as commonly taught in the South Asian (Indian/Pakistani) tradition. Rak'ah counts for Sunnah and Nafl prayers, and a few specific details (Jumu'ah's after-prayer Sunnah, Eid's ruling, Taraweeh's count), vary across madhhabs and scholars. Where this differs from what you've been taught, follow your local Imam or a qualified teacher."
+}

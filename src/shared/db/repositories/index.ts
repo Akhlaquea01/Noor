@@ -27,6 +27,7 @@ export const learningProgressRepo = createKeyedRepo('learningProgress')
 export const downloadsRepo = createKeyedRepo('downloads')
 export const remindersRepo = createKeyedRepo('reminders')
 export const articleProgressRepo = createKeyedRepo('articleProgress')
+export const pilgrimageProgressRepo = createKeyedRepo('pilgrimageProgress')
 
 export const readingSessionsRepo = createAutoRepo('readingSessions')
 export const tasbihSessionsRepo = createAutoRepo('tasbihSessions')

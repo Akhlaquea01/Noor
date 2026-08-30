@@ -20,3 +20,79 @@
   flex-direction: column;
   gap: var(--space-3);
 }
+
+.salah-page__rakat-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.salah-page__rakat-link strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.salah-page__rakat-link small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.salah-page__preconditions {
+  margin-bottom: var(--space-4);
+}
+
+.salah-page__preconditions h2 {
+  margin: 0 0 var(--space-3);
+  font-size: 0.95rem;
+}
+
+.salah-page__precondition-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.salah-page__precondition-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.salah-page__precondition-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-full);
+  background: rgba(184, 230, 138, 0.12);
+  color: var(--color-primary);
+}
+
+.salah-page__precondition-link strong {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.salah-page__precondition-link small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 1px;
+}
+
+.salah-page__precondition-arrow {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+}
