@@ -7,6 +7,7 @@ import { StageSelector } from '../learning-progress/StageSelector'
 import { useLearningStage } from '../learning-progress/hooks/useLearningStage'
 import { BookmarkButton } from '../bookmarks-favorites/BookmarkButton'
 import { ListenButton } from '../../shared/ui/ListenButton'
+import { ShareButton } from '../../shared/ui/ShareButton'
 import { getDuasByCategory, getDuaCategories } from './api/duaContent'
 import type { Dua, DuaCategory } from './types'
 import './DuaListPage.css'
@@ -21,6 +22,11 @@ export function DuaCard({ dua }: { dua: Dua }) {
         <div className="dua-list-page__card-actions">
           <ListenButton text={dua.arabic} lang="ar-SA" />
           <BookmarkButton contentType="dua" refId={dua.id} extra={{ duaId: dua.id, note: dua.title }} />
+          <ShareButton
+            title={dua.title}
+            text={`${dua.title}\n\n${dua.arabic}\n\n"${dua.translation}"\n— ${dua.reference}`}
+            iconOnly
+          />
         </div>
       </div>
       <p className="dua-list-page__reference">{dua.reference}</p>

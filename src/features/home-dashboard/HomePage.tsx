@@ -20,6 +20,7 @@ import {
   Mountain,
 } from 'lucide-react'
 import { GlassCard } from '../../shared/ui/GlassCard'
+import { ShareButton } from '../../shared/ui/ShareButton'
 import { usePreferencesStore } from '../../shared/state/preferencesStore'
 import { useQuranProgressStore } from '../../shared/state/quranProgressStore'
 import { usePrayerStreakStore } from '../../shared/state/prayerStreakStore'
@@ -167,9 +168,22 @@ export function HomePage() {
               </p>
               <p className="home-page__verse-translation">&ldquo;{verse.translation}&rdquo;</p>
               <p className="home-page__verse-source">{verse.reference}</p>
-              <Link to={`/quran/${verse.surah}`} viewTransition className="home-page__verse-link">
-                Read in context <ChevronRight size={14} aria-hidden="true" />
-              </Link>
+              <div className="home-page__verse-footer">
+                {/* Hadith-sourced daily-life/death duas have no surah — only
+                    Quran-sourced verses can link back into the reader. */}
+                {verse.surah ? (
+                  <Link to={`/quran/${verse.surah}`} viewTransition className="home-page__verse-link">
+                    Read in context <ChevronRight size={14} aria-hidden="true" />
+                  </Link>
+                ) : (
+                  <span />
+                )}
+                <ShareButton
+                  title="Verse of the day — Noor"
+                  text={`${verse.arabic}\n\n"${verse.translation}"\n— ${verse.reference}`}
+                  url={verse.surah ? `${location.origin}${location.pathname}#/quran/${verse.surah}` : undefined}
+                />
+              </div>
             </>
           )}
         </GlassCard>

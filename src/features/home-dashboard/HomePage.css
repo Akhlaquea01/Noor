@@ -112,6 +112,25 @@
   margin: 0;
 }
 
+.home-page__verse-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: auto;
+  padding-top: var(--space-4);
+}
+
+/* :not(...) rather than a plain descendant selector so this never competes
+   in specificity with .share-button--error (ShareButton.css) — an equal- or
+   higher-specificity override here would otherwise mask the error state's
+   red color on this card, regardless of stylesheet import order. */
+.home-page__verse-footer .share-button:not(.share-button--error) {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: var(--accent-panel-muted);
+}
+
 .home-page__verse-link {
   display: inline-flex;
   align-items: center;
@@ -120,8 +139,6 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 0.75rem;
-  margin-top: auto;
-  padding-top: var(--space-4);
 }
 
 .home-page__section {

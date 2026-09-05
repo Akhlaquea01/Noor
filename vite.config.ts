@@ -42,10 +42,15 @@ export default defineConfig({
           { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
           { src: '/icons/maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
+        // Routing is hash-based (see router.tsx) — a shortcut url must include
+        // the '#/...' segment itself. A bare '/quran' would launch the app at
+        // path "/" with an empty hash, landing on Home instead of the
+        // intended screen, since the router only ever reads location.hash.
         shortcuts: [
-          { name: 'Quran', url: '/quran', icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
-          { name: 'Prayer Times', url: '/prayer-times', icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
-          { name: 'Tasbih', url: '/tasbih', icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
+          { name: 'Quran', url: '/#/quran', icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
+          { name: 'Prayer Times', url: '/#/prayer-times', icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
+          { name: 'Qibla', url: '/#/qibla', icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
+          { name: 'Tasbih', url: '/#/tasbih', icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
         ],
       },
       injectManifest: {
